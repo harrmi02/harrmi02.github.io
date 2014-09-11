@@ -1,7 +1,14 @@
-body{
+body {
 	background-color:Gainsboro;
 	}
 h2 {
 	text-align: center;
 	color: DarkSlateBlue;
+	}
+h4 {
+	text-align:center;
+	color: #00008B;
+	}
+p {
+	text-align: center;
 	}
