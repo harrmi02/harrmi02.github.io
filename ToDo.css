@@ -23,3 +23,9 @@ li {
 	text-decoration: line-through;
 	list-style: url("https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSa6v7o9QOmGJG7RTwn1TzXLlwVvstTCcskHVpgB4h5bG0lrUqm");
 	}
+body {
+	background-color: FFE4B5;
+	}
+ul {
+	background-color: #FFF8DC;
+	}
