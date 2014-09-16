@@ -1,0 +1,25 @@
+h1 {
+	color:#191970;
+	}
+li {
+	list-style: url("http://png-5.findicons.com/files/icons/2139/uidesign/16/checkbox_no.png");
+	}
+.high {
+	font-size:20pt;
+	color: #B22222;
+	}
+	
+.med {
+	font-size: 16pt;
+	color: #8B008B;
+	}
+	
+.low {
+	font-size: 12pt;
+	color: #483D8B;
+	}
+	
+.done {
+	text-decoration: line-through;
+	list-style: url("https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSa6v7o9QOmGJG7RTwn1TzXLlwVvstTCcskHVpgB4h5bG0lrUqm");
+	}
