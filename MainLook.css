@@ -4,10 +4,11 @@ body {
 	}
 header {
 	background-color: #968AA1;
-    width: 99%;
+    width: 98%;
     height: 60px;
     position: fixed;
-    margin-top: 0px;
+    top: 10px;
+
 	}
 
 header p{
@@ -25,7 +26,7 @@ div{
 nav{
     position:fixed;
     top: 90px;
-    left: 90%;
+    right: 20px;
     width: 130px;
     height: 83%;
     background-color:#968AA1; 
@@ -77,7 +78,6 @@ img{
 aside{
     background-color: #968AA1;
     width: 300px;
-    height: 83%;
     float: left;
     margin-left: 20px;
     
@@ -85,7 +85,7 @@ aside{
 article, section{
     float: left;
     background-color: #968AA1;
-    width: 68%;
+    width: 1060px;
     position: relative;
     margin-left: 20px;
     margin-bottom: 20px;
