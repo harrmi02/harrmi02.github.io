@@ -1,21 +1,19 @@
 body {
 	background-color:#2E2144;
-    margin:10px;
+    margin:1%;
 	}
 header {
 	background-color: #968AA1;
     width: 98%;
-    height: 60px;
-    position: fixed;
-    top: 10px;
 
+    position: fixed;
+    top: 1%;
 	}
 
 header p{
     font-size: 40pt;
     font-family: Candara, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
-    margin: 0px;
-    z-index: 1;
+    margin: 0%;
 }
 div{
     background-color: #2E2144;
@@ -26,8 +24,8 @@ div{
 nav{
     position:fixed;
     top: 90px;
-    right: 20px;
-    width: 130px;
+    right: 1%;
+    width: 8.7%;
     height: 83%;
     background-color:#968AA1; 
     float: right;
@@ -35,7 +33,7 @@ nav{
 .navMenu{
     list-style-type:none;
     position: absolute;
-    left: -20px;
+    left: -20%;
 }
 
 a{
@@ -69,39 +67,39 @@ p{
 }
 img{
     float:left;
-    margin-left: 20px;
-    margin-bottom: 15px;
-    z-index: -1;
+    margin-left: 1.4%;
+    margin-bottom: 1%;
     position: relative;
-    top: -50px;
+    bottom: 15%;
+    width: 18.7%;
 }
 aside{
     background-color: #968AA1;
-    width: 300px;
+    width: 20%;
     float: left;
-    margin-left: 20px;
-    
+    margin-left: 1%;    
 }
 article, section{
     float: left;
     background-color: #968AA1;
-    width: 1060px;
+    width: 68%;
     position: relative;
-    margin-left: 20px;
+    margin-left: 1%;
     margin-bottom: 20px;
-    height: 250px;
-    z-index: -1;
+    height: 15%;
+
 }
 section{
-    margin-left: 26px;
-    height: 200px;
+    margin-left: 1.8%;
+    height: 10%;
+
 }
 h3{
     position: relative;
-    top: 10px;
+    top: 1%;
 }
 article p, section p{
-    margin: 40px;
+    margin: 4%;
 }
 footer{
     background-color: #968AA1;
