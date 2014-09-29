@@ -20,11 +20,12 @@ header h2{
 .placeHolder{
     background-color: #2E2144;
     width: 100%;
-    height: 80px;
+    height: 75px;
 }
 .content{
     position: relative;
     top: 120px;
+    float:left;
 }
 
 nav{
@@ -48,7 +49,7 @@ nav{
 }
 
 
-a{
+a, li{
     text-decoration:none;
     font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
     color: #442960;
@@ -58,7 +59,7 @@ p a{
     font-family:inherit;
 }
 
-li ul{
+.navMenu ul{
     display:none;
     list-style-type:none;
     color: #442960;
@@ -102,10 +103,8 @@ article, section{
     height: 15%;
 
 }
-section{
-    
+section{   
     height: 10%;
-
 }
 h3{
     position: relative;
@@ -139,4 +138,38 @@ img{
     float: left;
     width: 30%;
     display: block;
+}
+#steampunk{
+    width: 20%;
+    clear: left;
+    position: relative;
+    left: 1%;
+    top: 20px;
+}
+#resume{
+    position: relative;
+    top: -70px;
+    left: 1%;
+}
+#theater, #code{
+    position:relative;
+    top: 80px;
+    width: 100%;
+    height: 90%;
+}
+.normList li{
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    font-size: 11pt;
+    color:#442960;
+    margin: 0.6%;
+}
+#comic{
+    width: 55%;
+    position: relative;
+    left: 6%;
+}
+#xkcd{
+    width: 90.3%;
+    position: relative;
+    top: 20px;
 }
