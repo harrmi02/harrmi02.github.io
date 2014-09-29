@@ -63,6 +63,7 @@ p a{
     display:none;
     list-style-type:none;
     color: #442960;
+    position: absolute;
 }
 .navMenu:hover ul{
     display:block;
