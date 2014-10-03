@@ -1,15 +1,19 @@
 body{
-	background-color: #F9F9EF;
+	background-color: #8B0000;
 	}
 	
 div{
-	border: 1px solid black;
-	margin: 10%;
-	background-color: #2ABEF8;
+	margin: 3%;
+	background-color: #fbd28d;
+    padding-bottom: 40px;
 	}
 	
-h2{
+p{
 	text-align: center;
+    font-family: "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
+    color: #583a06;
+    font-size: 30pt;
+    margin-bottom: 20px;
 	}
 	
 section{
@@ -17,8 +21,8 @@ section{
     margin-left: auto;
 	margin-right: auto;
     margin-top: 0px;
-    margin-bottom: 25px;
-	background-color: #355DED;
+	background-color:antiquewhite;
+
 	}
 	
 #addTask{
@@ -26,6 +30,17 @@ section{
     width: 30%;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 4px;
-    margin-top:0px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding-bottom: 0px;
+}
+
+td, label, button{
+    color:#583a06;
+    font-family: "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
+    font-size: 13pt;
+}
+
+button{
+    background-color:#f3a385;
 }

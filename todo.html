@@ -7,43 +7,45 @@
         taskCount = 0;
 
         addTask = function () {
-            var newTask;
-            taskCount ++;
-			
-            table = document.querySelector('#list');
-            row = document.createElement('tr');
-            task = document.createElement('td');
+            if (document.querySelector('#newTask').value != "") {
+                var newTask;
+                taskCount++;
 
-            newTask = document.querySelector('#newTask').value;
-            task.innerHTML = newTask;
-			
-            checkBox = document.createElement('input');
-            checkBox.type = 'checkbox';
-            var id = taskCount.toString();
-            checkBox.id = id;
+                table = document.querySelector('#list');
+                row = document.createElement('tr');
+                task = document.createElement('td');
 
-            table.appendChild(row);
-            row.appendChild(checkBox);
-            row.appendChild(task);
+                newTask = document.querySelector('#newTask').value;
+                task.innerHTML = newTask;
 
-            checkBox.onclick = function() {
-                box = document.getElementById(id);
-                task = box.nextSibling;
-                if (box.checked) {                   
-                    task.style.textDecoration = 'line-through';
-                } else {
-                    task.style.textDecoration = 'none';
+                checkBox = document.createElement('input');
+                checkBox.type = 'checkbox';
+                var id = taskCount.toString();
+                checkBox.id = id;
+
+                table.appendChild(row);
+                row.appendChild(checkBox);
+                row.appendChild(task);
+
+                checkBox.onclick = function () {
+                    box = document.getElementById(id);
+                    task = box.nextSibling;
+                    if (box.checked) {
+                        task.style.textDecoration = 'line-through';
+                    } else {
+                        task.style.textDecoration = 'none';
+                    }
                 }
+
+                document.querySelector('#newTask').value = "";
             }
-           
-            document.querySelector('#newTask').value = "";
             }
 	</script>
 </head>
 <body>
-
+    
 	<div>
-		<h2>To Do List</h2>
+        <p>To Do List</p>
         <div id="addTask">
             <label for='newTask'>New Task:</label>
             <input id="newTask" type="text" onchange="addTask()"/>
