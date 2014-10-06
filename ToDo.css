@@ -14,7 +14,7 @@ p{
     color: #583a06;
     font-size: 30pt;
     margin-bottom: 20px;
-    width: 90%;
+    width: 70%;
 	}
 	
 section{
@@ -25,15 +25,21 @@ section{
 	background-color:antiquewhite;
 
 	}
+
+#add {
+    background-color: #f3a385;
+    width: 10%;
+}
 	
 #addTask{
 	border: none;
-    width: 30%;
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 20px;
     margin-bottom: 10px;
     padding-bottom: 0px;
+    
 }
 
 td, label, button{
@@ -42,6 +48,3 @@ td, label, button{
     font-size: 13pt;
 }
 
-button {
-    background-color: #f3a385;
-}
