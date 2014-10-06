@@ -14,11 +14,13 @@ p{
     color: #583a06;
     font-size: 30pt;
     margin-bottom: 20px;
-    width: 70%;
+    width: 60%;
+    margin-left: auto;
+	margin-right: auto;
 	}
 	
-section{
-    width: 70%;
+article{
+    width: 60%;
     margin-left: auto;
 	margin-right: auto;
     margin-top: 0px;
@@ -46,5 +48,9 @@ td, label, button{
     color:#583a06;
     font-family: "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
     font-size: 13pt;
+}
+section{
+    position: relative;
+    left: 38%;
 }
 

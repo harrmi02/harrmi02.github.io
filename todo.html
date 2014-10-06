@@ -47,13 +47,15 @@
 	<div>
         <p>To Do List</p>
         <div id="addTask">
-            <label for='newTask'>New Task:</label>
-            <input id="newTask" type="text" onchange="addTask()"/>
-            <button id="add" onclick="addTask()">Add</button>
-        </div>
-        <section >
-            <table id ="list"></table>
-        </section>
+            <section>
+                <label for='newTask'>New Task:</label>
+                <input id="newTask" type="text" onchange="addTask()" />
+                <button id="add" onclick="addTask()">Add</button>
+            </section>
+        </div>  
+        <article>
+            <table id="list"></table>
+        </article>
 
 	</div>
 </body>
