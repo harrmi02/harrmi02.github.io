@@ -14,6 +14,7 @@ p{
     color: #583a06;
     font-size: 30pt;
     margin-bottom: 20px;
+    width: 90%;
 	}
 	
 section{
@@ -41,6 +42,6 @@ td, label, button{
     font-size: 13pt;
 }
 
-button{
-    background-color:#f3a385;
+button {
+    background-color: #f3a385;
 }
