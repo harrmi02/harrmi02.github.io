@@ -1,14 +1,142 @@
 body {
-	background-color:Gainsboro;
+	background-color:#2E2144;
+    margin:1%;
 	}
-h2 {
+header {
+	background-color: #968AA1;
+    width: 98%;
+    z-index: 2;
+    position: fixed;
+    top: 1%;
+	}
+header h2{
+   font-family: Candara, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+   font-size: 40pt;
+   margin: 0%;
+   text-align: center;
+   color: #442960;
+}
+
+.placeHolder{
+    background-color: #2E2144;
+    width: 100%;
+    height: 80px;
+}
+.content{
+    position: relative;
+    top: 120px;
+}
+
+nav{
+    position:fixed;
+    top: 90px;
+    right: 1%;
+    width: 8.7%;
+    height: 83%;
+    background-color:#968AA1; 
+    float: right;
+}
+.navMenu{
+    list-style-type:none;
+    position: absolute;
+    left: -20%;
+    z-index: 4;
+}
+#beadingMenu{
+    position: relative;
+    top: 30px;
+}
+
+
+a{
+    text-decoration:none;
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    color: #442960;
+}
+
+p a{
+    font-family:inherit;
+}
+
+li ul{
+    display:none;
+    list-style-type:none;
+    color: #442960;
+}
+.navMenu:hover ul{
+    display:block;
+    position: relative;
+    left: -40px;
+}
+p, h3 {
 	text-align: center;
-	color: DarkSlateBlue;
-	}
-h4 {
-	text-align:center;
-	color: #00008B;
-	}
-p {
-	text-align: center;
+    color:#442960;
+    font-family: Candara, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+}
+p{
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    font-size: 11pt;
+}
+#proof{
+    float:left;
+    margin-left: 1.4%;
+    margin-bottom: 1%;
+    margin-right: 0.8%;
+    position: relative;
+    bottom: 15%;
+    width: 18.7%;
+}
+aside{
+    background-color: #968AA1;
+    width: 20%;
+    float: left;
+    margin-left: 1%;    
+}
+article, section{
+    float: left;
+    background-color: #968AA1;
+    width: 68%;
+    position: relative;
+    margin-left: 1%;
+    margin-bottom: 20px;
+    height: 15%;
+
+}
+section{
+    
+    height: 10%;
+
+}
+h3{
+    position: relative;
+    top: 1%;
+}
+article p, section p{
+    margin: 4%;
+}
+footer{
+    background-color: #968AA1;
+    width: 100%;
+    height: 18px;
+    margin-top: 15px;
+    clear: both;
+}
+footer p{
+    margin: 0px;
+}
+.item p{
+    margin: 0px;
+    display: inline;
+    position: relative;
+    top: 110px;
+    left: 1%;
+}
+.item{
+    height: 240px;
+    display:block;
+}
+img{
+    float: left;
+    width: 30%;
+    display: block;
 }

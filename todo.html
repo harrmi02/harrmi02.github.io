@@ -1,24 +1,33 @@
 <html>
 <head>
 	<link rel="stylesheet" href="ToDo.css" type="text/css"/>
+	<script type = "text/javascript">
+		addTask = function(){
+			var newTask;
+			
+			row = document.createElement('tr');
+			checkBoxSpot = document.createElement('td');
+			task = document.createElement('td');
+			
+			checkBox = document.createElement('button');
+			checkBox.innerHTML = '
+			
+			newTask = document.querySelector('#newTask').value;
+					
+		}
+	</script>
 </head>
 <body>
 
-<h1>To Get Done</h1>
-<ul>
-<li class="high">Applied Stats Homework</li>
-<li class="low done">Read <q>In The Next Room</q></li>
-<li class="med">Memorize lines</li>
-<li class="high">Internet Programming homework</li>
-<li class="high done">Acting Journal</li>
-<li class="med"> Read for acting, observations</li>
-<li class="med">Call my parents</li>
-<li class="low">Improve website</li>
-<li class="high">French homework</li>
-<li class="low">Get cat toys</li>
-<li class="low">Play <i>The Stanley Parable</i></li>
-
-</ul>
-
+	<div>
+		<h2>To Do List</h2>
+		<section>
+		<table></table>
+		</section>
+		<div id = "input">
+		<label for= 'newTask'>New Task:</label>
+		<input id="newTask" type="text"/>
+		</div>
+	</div>
 </body>
 </html>
