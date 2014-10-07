@@ -4,13 +4,64 @@
 	<link rel="stylesheet" href="ToDo.css" type="text/css"/>
 	<script type = "text/javascript">
         
-        taskCount = 0;
+        //taskCount = 0;     
+        
+        taskDone = function(){
+        	//box = document.getElementById(id);
+            task = this.nextSibling;
+            if (this.checked) {
+                task.style.textDecoration = 'line-through';
+                task.className = "done";
+            } else {
+                task.style.textDecoration = 'none';
+                task.className = "pending";
+                    }
+        }   
+        
+        localSave = function(){
+        	res = [];
+        	var i;
+        	allEntries = document.querySelectorAll('td');
+        	for(i=0; i< allEntries.length; i++){
+        		if(allEntries[i].className != "done"){
+        			res.push(allEntries[i].innerText);
+        			}
+        		}
+        		console.log(res)
+        		//store the array in localStoreage
+        		//alert(JSON.stringify(res));
+        		localStorage.setItem("todoDatabase", JSON.stringify(res));
+        }
+        
+        restoreList = function(){
+        	taskCount = 0;
+        	oldList = JSON.parse(localStorage.getItem("todoDatabase"));
+        	for(i = 0; i < oldList.length; i++){
+        		taskCount++;
+        		table = document.querySelector('#list');
+                row = document.createElement('tr');
+                task = document.createElement('td');
+                
+                task.innerHTML = oldList[i];
+                
+                checkBox = document.createElement('input');
+                checkBox.type = 'checkbox';
+                var id = taskCount.toString();
+                checkBox.id = id;
+
+                table.appendChild(row);
+                row.appendChild(checkBox);
+                row.appendChild(task);
+
+                checkBox.onclick = taskDone;
+        	}
+        }
 
         addTask = function () {
             if (document.querySelector('#newTask').value != "") {
                 var newTask;
                 taskCount++;
-
+                
                 table = document.querySelector('#list');
                 row = document.createElement('tr');
                 task = document.createElement('td');
@@ -27,22 +78,15 @@
                 row.appendChild(checkBox);
                 row.appendChild(task);
 
-                checkBox.onclick = function () {
-                    box = document.getElementById(id);
-                    task = box.nextSibling;
-                    if (box.checked) {
-                        task.style.textDecoration = 'line-through';
-                    } else {
-                        task.style.textDecoration = 'none';
-                    }
-                }
+                checkBox.onclick = taskDone;
 
                 document.querySelector('#newTask').value = "";
+                localSave();
             }
             }
 	</script>
 </head>
-<body>
+<body onload = "restoreList()">
     
 	<div>
         <p>To Do List</p>
