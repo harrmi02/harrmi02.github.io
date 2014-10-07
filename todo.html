@@ -1,7 +1,9 @@
 <html>
 <head>
+    <title>To Do List</title>
 	<link rel="stylesheet" href="ToDo.css" type="text/css"/>
 	<script type = "text/javascript">
+<<<<<<< HEAD
 		addTask = function(){
 			var newTask;
 			
@@ -15,10 +17,63 @@
 			newTask = document.querySelector('#newTask').value;
 					
 		}
+=======
+        
+        taskCount = 0;
+
+        addTask = function () {
+            if (document.querySelector('#newTask').value != "") {
+                var newTask;
+                taskCount++;
+
+                table = document.querySelector('#list');
+                row = document.createElement('tr');
+                task = document.createElement('td');
+
+                newTask = document.querySelector('#newTask').value;
+                task.innerHTML = newTask;
+
+                checkBox = document.createElement('input');
+                checkBox.type = 'checkbox';
+                var id = taskCount.toString();
+                checkBox.id = id;
+
+                table.appendChild(row);
+                row.appendChild(checkBox);
+                row.appendChild(task);
+
+                checkBox.onclick = function () {
+                    box = document.getElementById(id);
+                    task = box.nextSibling;
+                    if (box.checked) {
+                        task.style.textDecoration = 'line-through';
+                    } else {
+                        task.style.textDecoration = 'none';
+                    }
+                }
+
+                document.querySelector('#newTask').value = "";
+            }
+            }
+>>>>>>> FETCH_HEAD
 	</script>
 </head>
 <body>
+    
+	<div>
+        <p>To Do List</p>
+        <div id="addTask">
+            <section>
+                <label for='newTask'>New Task:</label>
+                <input id="newTask" type="text" onchange="addTask()" />
+                <button id="add" onclick="addTask()">Add</button>
+            </section>
+        </div>  
+        <article>
+            <table id="list"></table>
+        </article>
 
+<<<<<<< HEAD
 	<div>
 		<h2>To Do List</h2>
 		<section>
@@ -28,6 +83,8 @@
 		<label for= 'newTask'>New Task:</label>
 		<input id="newTask" type="text"/>
 		</div>
+=======
+>>>>>>> FETCH_HEAD
 	</div>
 </body>
 </html>
