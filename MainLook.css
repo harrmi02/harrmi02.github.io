@@ -20,19 +20,13 @@ header h2{
 .placeHolder{
     background-color: #2E2144;
     width: 100%;
-<<<<<<< HEAD
     height: 80px;
-=======
     height: 75px;
->>>>>>> FETCH_HEAD
 }
 .content{
     position: relative;
     top: 120px;
-<<<<<<< HEAD
-=======
     float:left;
->>>>>>> FETCH_HEAD
 }
 
 nav{
@@ -55,12 +49,7 @@ nav{
     top: 30px;
 }
 
-
-<<<<<<< HEAD
-a{
-=======
 a, li{
->>>>>>> FETCH_HEAD
     text-decoration:none;
     font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
     color: #442960;
@@ -70,18 +59,16 @@ p a{
     font-family:inherit;
 }
 
-<<<<<<< HEAD
-li ul{
-    display:none;
-    list-style-type:none;
+li ul {
+    display: none;
+    list-style-type: none;
     color: #442960;
-=======
+}
 .navMenu ul{
     display:none;
     list-style-type:none;
     color: #442960;
     position: absolute;
->>>>>>> FETCH_HEAD
 }
 .navMenu:hover ul{
     display:block;
@@ -122,15 +109,9 @@ article, section{
     height: 15%;
 
 }
-<<<<<<< HEAD
-section{
-    
-    height: 10%;
 
-=======
 section{   
     height: 10%;
->>>>>>> FETCH_HEAD
 }
 h3{
     position: relative;
@@ -165,8 +146,7 @@ img{
     width: 30%;
     display: block;
 }
-<<<<<<< HEAD
-=======
+
 #steampunk{
     width: 20%;
     clear: left;
@@ -201,5 +181,7 @@ img{
     position: relative;
     top: 20px;
 }
-
->>>>>>> FETCH_HEAD
+#theaterFoot{
+    position: relative;
+    top: 200px;
+}

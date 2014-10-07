@@ -1,28 +1,4 @@
 body{
-<<<<<<< HEAD
-	background-color: #F9F9EF;
-	}
-	
-div{
-	border: 1px solid black;
-	margin: 10%;
-	background-color: #2ABEF8;
-	}
-	
-h2{
-	text-align: center;
-	}
-	
-section{
-	border: 1 px solid black;
-	margin: 15%;
-	background-color: #355DED;
-	}
-	
-#input{
-	border: none;
-}
-=======
 	background-color: #8B0000;
 	}
 	
@@ -78,4 +54,3 @@ section{
     left: 38%;
 }
 
->>>>>>> FETCH_HEAD
