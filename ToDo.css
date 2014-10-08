@@ -54,3 +54,13 @@ section{
     left: 38%;
 }
 
+.med{
+    color: #a93e0f;
+    font-style: italic;
+}
+
+.high{
+    color: #8B0000;
+    font-style: italic;
+    font-size: 15pt;
+}

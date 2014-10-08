@@ -3,19 +3,18 @@
     <title>To Do List</title>
 	<link rel="stylesheet" href="ToDo.css" type="text/css"/>
 	<script type = "text/javascript">
-        
-        //taskCount = 0;     
+           
         
         taskDone = function(){
-        	//box = document.getElementById(id);
             task = this.nextSibling;
             if (this.checked) {
                 task.style.textDecoration = 'line-through';
-                task.className = "done";
+                task.classList.toggle("done");
             } else {
                 task.style.textDecoration = 'none';
-                task.className = "pending";
-                    }
+                task.classList.toggle("done");
+            }
+            localSave();
         }   
         
         localSave = function(){
@@ -23,8 +22,9 @@
         	var i;
         	allEntries = document.querySelectorAll('td');
         	for(i=0; i< allEntries.length; i++){
-        		if(allEntries[i].className != "done"){
-        			res.push(allEntries[i].innerText);
+        		if(!allEntries[i].classList.contains("done")){
+        		    res.push(allEntries[i].innerText);
+        		    res.push(allEntries[i].className);
         			}
         		}
         		console.log(res)
@@ -36,13 +36,14 @@
         restoreList = function(){
         	taskCount = 0;
         	oldList = JSON.parse(localStorage.getItem("todoDatabase"));
-        	for(i = 0; i < oldList.length; i++){
+        	for(i = 0; i < oldList.length; i+=2){
         		taskCount++;
         		table = document.querySelector('#list');
                 row = document.createElement('tr');
                 task = document.createElement('td');
                 
                 task.innerHTML = oldList[i];
+                task.className = oldList[i + 1];
                 
                 checkBox = document.createElement('input');
                 checkBox.type = 'checkbox';
@@ -60,6 +61,7 @@
         addTask = function () {
             if (document.querySelector('#newTask').value != "") {
                 var newTask;
+                var priority;
                 taskCount++;
                 
                 table = document.querySelector('#list');
@@ -68,6 +70,9 @@
 
                 newTask = document.querySelector('#newTask').value;
                 task.innerHTML = newTask;
+
+                priority = document.querySelector('#priority').value;
+                task.className = priority;
 
                 checkBox = document.createElement('input');
                 checkBox.type = 'checkbox';
@@ -93,7 +98,12 @@
         <div id="addTask">
             <section>
                 <label for='newTask'>New Task:</label>
-                <input id="newTask" type="text" onchange="addTask()" />
+                <input id="newTask" type="text"/>
+                <select id="priority">
+                    <option value="low">Low Priority</option>
+                    <option value="med">Medium Proirity</option>
+                    <option value="high">High Priority</option>
+                </select>
                 <button id="add" onclick="addTask()">Add</button>
             </section>
         </div>  
