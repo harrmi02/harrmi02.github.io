@@ -3,147 +3,152 @@
     <title>To Do List</title>
 	<link rel="stylesheet" href="ToDo.css" type="text/css"/>
 	<script type = "text/javascript">
-           
-        Task = function(name, priority, dueDate, projectName){
-        	this.name = name;
-        	this.priority = priority;
-        	this.due = dueDate;
-        	this.project = projectName;
-        	this.done = false;
-        	
-        	this.finish = function(){
-        		if(!this.done){
-        			this.style.textDecoration = 'line-through';
-        			this.done = true;
-        		}else{
-        			this.style.textDecoration = 'none';
-        			this.done = false;
-        			}
-        	}
+
+        Task = function(){
+        	this.name;
+        	this.priority;
+        	this.dueDate;
+        	this.project;
+        	this.done;
+        	this.spot = 0;
         	
         }
-        
-        TaskList = function(){
-        	var tasks = [];
-        	
-        	this.addTask = function(newTask){
-        		tasks.push(newTask);
-        		for(i = 0; i < tasks.length; i++){
-        			
-        		}
-        	}
-        	
-        	this.removeTask = function(task){
-        	
-        	}
-        	
-        	this.saveAll = function(){
-        	
-        	}
-        	
-        	this.restoreAll = function(){
-        	
-        	}
-        }
-        /*taskDone = function(){
-            task = this.nextSibling;
-            if (this.checked) {
-                task.style.textDecoration = 'line-through';
-                task.classList.toggle("done");
-            } else {
-                task.style.textDecoration = 'none';
-                task.classList.toggle("done");
+
+
+        TaskList = function () {
+            var tasks = [];
+
+            this.getTasks = function () {
+                return tasks;
             }
-            localSave();
-        }   
-        
-        localSave = function(){
-        	res = [];
-        	var i;
-        	allEntries = document.querySelectorAll('td');
-        	for(i=0; i< allEntries.length; i++){
-        		if(!allEntries[i].classList.contains("done")){
-        		    res.push(allEntries[i].innerText);
-        		    res.push(allEntries[i].className);
-        			}
-        		}
-        		console.log(res)
-        		localStorage.setItem("todoDatabase", JSON.stringify(res));
+
+            this.addTask = function (newTask) {
+                tasks.push(newTask);
+                newTask.spot = tasks.length - 1;
+            }
+
+            this.removeTask = function (task) {
+                tasks.splice(task.spot, 1);
+                for (var i = 0; i < tasks.length; i++) {
+                    tasks[i].spot = i;
+                }
+            }
+
+            this.saveAll = function () {
+                res = [];
+                var i;
+
+                for (i = 0; i < tasks.length; i++) {
+                    if (!tasks[i].done) {
+                        res.push(tasks[i]);
+                    }
+                }
+                localStorage.setItem("todoDatabase", JSON.stringify(res));
+            }
+
+            this.display = function () {
+
+                for (i = 0; i < taskList.getTasks().length; i++) {
+                    table = document.querySelector('#list');
+                    row = document.createElement('tr');
+                    taskPlace = document.createElement('td');
+                    date = document.createElement('td');
+                    
+
+                    task = tasks[i];
+                    checkBox = document.createElement('input');
+                    checkBox.type = 'checkbox';
+                    checkBox.id = task.spot.toString();
+                    checkBox.onclick = taskDone;
+                    taskPlace.innerHTML = task.name;
+                    taskPlace.className = task.priority;
+                    date.innerHTML = task.dueDate;                    
+
+                    table.appendChild(row);
+                    row.appendChild(checkBox);
+                    row.appendChild(taskPlace);
+                    row.appendChild(date);
+                }
+
+            }
+
+
+            this.restoreAll = function () {
+                oldList = JSON.parse(localStorage.getItem("todoDatabase"));
+                for (i = 0; i < oldList.length; i++) {
+                    this.addTask(oldList[i]);
+                }
+
+                this.display();
+            }
+
+
+        }
+
+        taskList = new TaskList();
+
+        taskDone = function () {
+            var place = parseInt(this.id);
+            var task = taskList.getTasks()[place];
+            var name = this.nextSibling;
+            if (!task.done) {
+                name.style.textDecoration = 'line-through';
+                task.done = true;
+            
+            } else {
+                name.style.textDecoration = 'none';
+                task.done = false;
+            }
+            taskList.saveAll();
         }
         
-        restoreList = function(){
-        	taskCount = 0;
-        	oldList = JSON.parse(localStorage.getItem("todoDatabase"));
-        	for(i = 0; i < oldList.length; i+=2){
-        		taskCount++;
-        		table = document.querySelector('#list');
-                row = document.createElement('tr');
-                task = document.createElement('td');
-                
-                task.innerHTML = oldList[i];
-                task.className = oldList[i + 1];
-                
-                checkBox = document.createElement('input');
-                checkBox.type = 'checkbox';
-                var id = taskCount.toString();
-                checkBox.id = id;
-
-                table.appendChild(row);
-                row.appendChild(checkBox);
-                row.appendChild(task);
-
-                checkBox.onclick = taskDone;
-        	}
-        }
 
         addTask = function () {
-            if (document.querySelector('#newTask').value != "") {
-                var newTask;
-                var priority;
-                taskCount++;
-                
-                table = document.querySelector('#list');
-                row = document.createElement('tr');
-                task = document.createElement('td');
 
-                newTask = document.querySelector('#newTask').value;
-                task.innerHTML = newTask;
+            newTask = new Task();
 
-                priority = document.querySelector('#priority').value;
-                task.className = priority;
+            newTask.name = document.querySelector('#newTask').value;
 
-                checkBox = document.createElement('input');
-                checkBox.type = 'checkbox';
-                var id = taskCount.toString();
-                checkBox.id = id;
+            newTask.priority = document.querySelector('#priority').value;
 
-                table.appendChild(row);
-                row.appendChild(checkBox);
-                row.appendChild(task);
+            newTask.dueDate = document.querySelector('#date').value;
 
-                checkBox.onclick = taskDone;
+            newTask.done = false;
 
-                document.querySelector('#newTask').value = "";
-                localSave();
+            table = document.querySelector('#list');
+
+            for (i = 0; i < taskList.getTasks().length; i++) {
+                table.deleteRow();
             }
-            }*/
+
+            taskList.addTask(newTask);
+
+            taskList.display();
+
+            document.querySelector('#newTask').value = "";
+            taskList.saveAll();
+        }
+
 	</script>
 </head>
-<body onload = "restoreList()">
+<body onload="taskList.restoreAll()">
     
 	<div>
         <p>To Do List</p>
         <div id="addTask">
             <section>
-                <label for='newTask'>New Task:</label>
+                <label for='newTask'>Task Name:</label>
                 <input id="newTask" type="text"/>
                 <select id="priority">
                     <option value="low">Low Priority</option>
                     <option value="med">Medium Proirity</option>
                     <option value="high">High Priority</option>
                 </select>
-                <button id="add" onclick="addTask()">Add</button>
+                <label for="date">Due On:</label>
+                <input id="date" type="date" />
+                
             </section>
+            <button id="add" onclick="addTask()">Add</button>
         </div>  
         <article>
             <table id="list"></table>
