@@ -4,8 +4,48 @@
 	<link rel="stylesheet" href="ToDo.css" type="text/css"/>
 	<script type = "text/javascript">
            
+        Task = function(name, priority, dueDate, projectName){
+        	this.name = name;
+        	this.priority = priority;
+        	this.due = dueDate;
+        	this.project = projectName;
+        	this.done = false;
+        	
+        	this.finish = function(){
+        		if(!this.done){
+        			this.style.textDecoration = 'line-through';
+        			this.done = true;
+        		}else{
+        			this.style.textDecoration = 'none';
+        			this.done = false;
+        			}
+        	}
+        	
+        }
         
-        taskDone = function(){
+        TaskList = function(){
+        	var tasks = [];
+        	
+        	this.addTask = function(newTask){
+        		tasks.push(newTask);
+        		for(i = 0; i < tasks.length; i++){
+        			
+        		}
+        	}
+        	
+        	this.removeTask = function(task){
+        	
+        	}
+        	
+        	this.saveAll = function(){
+        	
+        	}
+        	
+        	this.restoreAll = function(){
+        	
+        	}
+        }
+        /*taskDone = function(){
             task = this.nextSibling;
             if (this.checked) {
                 task.style.textDecoration = 'line-through';
@@ -28,8 +68,6 @@
         			}
         		}
         		console.log(res)
-        		//store the array in localStoreage
-        		//alert(JSON.stringify(res));
         		localStorage.setItem("todoDatabase", JSON.stringify(res));
         }
         
@@ -88,7 +126,7 @@
                 document.querySelector('#newTask').value = "";
                 localSave();
             }
-            }
+            }*/
 	</script>
 </head>
 <body onload = "restoreList()">
