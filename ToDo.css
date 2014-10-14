@@ -49,18 +49,21 @@ td, label, button{
     font-family: "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
     font-size: 13pt;
 }
+
+button{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 section{
     position: relative;
-    left: 30%;
+    left: 20%;
 }
 
 .med{
     color: #a93e0f;
-    font-style: italic;
 }
 
 .high{
     color: #8B0000;
-    font-style: italic;
-    font-size: 15pt;
 }
