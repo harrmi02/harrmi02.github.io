@@ -45,7 +45,7 @@ TaskList = function () {
             }
         }
 
-        //headerRow = document.createElement('tr');
+        headerRow = document.createElement('tr');
         pBox = document.createElement('input');
         pBox.type = 'checkbox';
         pBox.id = _this.rank;
@@ -53,14 +53,15 @@ TaskList = function () {
         header = document.createElement('th');
         header.innerHTML = _this.name;
 
-        //table.appendChild(headerRow);
-        //headerRow.appendChild(pBox);
-        //headerRow.appendChild(header);
+        table.appendChild(headerRow);
+        headerRow.appendChild(pBox);
+        headerRow.appendChild(header);
 
-        table.appendChild(pBox);
-        table.appendChild(header);
+        //table.appendChild(pBox);
+        //table.appendChild(header);
         
         header.onclick = function () {
+            alert('clicked')
             rows = table.rows;
            if (rows.style.display == 'none') {
                 rows.style.display = 'block';
