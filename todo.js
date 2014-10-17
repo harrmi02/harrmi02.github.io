@@ -60,11 +60,11 @@ TaskList = function () {
         header.onclick = function () {
             alert("clicked!")
             var rows = document.querySelectorAll('.' + _this.name);
-            if (rows.style.display == 'none') {
+            //if (rows.style.display == 'none') {
                 rows.style.display = 'block';
-            } else {
-                rows.style.display = 'none';
-            }
+            //} else {
+               // rows.style.display = 'none';
+            //}
         }
             
 
