@@ -57,7 +57,8 @@ TaskList = function () {
         headerRow.appendChild(pBox);
         headerRow.appendChild(header);
         
-        header.innerHTML.onclick = function () {
+        header.onclick = function () {
+            alert("clicked!")
             var rows = document.querySelectorAll('.' + _this.name);
             if (rows.style.display == 'none') {
                 rows.style.display = 'block';
