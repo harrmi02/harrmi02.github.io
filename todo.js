@@ -57,7 +57,7 @@ TaskList = function () {
         headerRow.appendChild(pBox);
         headerRow.appendChild(header);
         
-        headerRow.innerHTML.onclick = function () {
+        header.onclick = function () {
             var rows = document.querySelectorAll('.' + _this.name);
             if (rows.style.display == 'none') {
                 rows.style.display = 'block';
@@ -115,7 +115,7 @@ saveAll = function () {
 restoreAll = function () {
     projectList = [];
     oldList = JSON.parse(localStorage.getItem("todoDatabase"));
-    console.log(oldList);
+
     var current;
     var project;
 
