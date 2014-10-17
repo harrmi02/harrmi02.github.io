@@ -57,17 +57,7 @@ TaskList = function () {
         headerRow.appendChild(pBox);
         headerRow.appendChild(header);
         
-        header.onclick = function () {
-            alert("clicked!")
-            var rows = document.querySelectorAll('.' + _this.name);
-            console.log(rows);
-            //if (rows.style.display == 'none') {
-                //rows.style.display = 'block';
-            //} else {
-               // rows.style.display = 'none';
-            //}
-        }
-            
+         
 
         for (i = 0; i < tasks.length; i++) {
                     
@@ -93,7 +83,15 @@ TaskList = function () {
             row.appendChild(taskPlace);
             row.appendChild(date);
         }
-
+header.onclick = function () {
+            
+           if (rows.style.display == 'none') {
+                rows.style.display = 'block';
+            } else {
+                rows.style.display = 'none';
+            }
+        }
+           
     }
 
 }
