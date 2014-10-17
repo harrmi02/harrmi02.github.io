@@ -61,9 +61,10 @@ TaskList = function () {
         //table.appendChild(header);
         
         header.onclick = function () {
-            alert('clicked')
-            rows = table.rows;
+            
+           rows = table.rows;
            if (rows.style.display == 'none') {
+               alert('hidden');
                 rows.style.display = 'block';
             } else {
                 rows.style.display = 'none';
