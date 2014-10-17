@@ -44,14 +44,14 @@ article{
     
 }
 
-td, label, button{
+td, label, button, th{
     color:#583a06;
     font-family: "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
     font-size: 13pt;
 }
 
 button{
-    display: block;
+    
     margin-left: auto;
     margin-right: auto;
 }
