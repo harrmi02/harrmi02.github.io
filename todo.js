@@ -45,7 +45,7 @@ TaskList = function () {
             }
         }
 
-        headerRow = document.createElement('tr');
+        //headerRow = document.createElement('tr');
         pBox = document.createElement('input');
         pBox.type = 'checkbox';
         pBox.id = _this.rank;
@@ -53,11 +53,22 @@ TaskList = function () {
         header = document.createElement('th');
         header.innerHTML = _this.name;
 
-        table.appendChild(headerRow);
-        headerRow.appendChild(pBox);
-        headerRow.appendChild(header);
+        //table.appendChild(headerRow);
+        //headerRow.appendChild(pBox);
+        //headerRow.appendChild(header);
+
+        table.appendChild(pBox);
+        table.appendChild(header);
         
-         
+        header.onclick = function () {
+            rows = table.rows;
+           if (rows.style.display == 'none') {
+                rows.style.display = 'block';
+            } else {
+                rows.style.display = 'none';
+            }
+        }
+            
 
         for (i = 0; i < tasks.length; i++) {
                     
@@ -83,15 +94,7 @@ TaskList = function () {
             row.appendChild(taskPlace);
             row.appendChild(date);
         }
-header.onclick = function () {
-            
-           if (rows.style.display == 'none') {
-                rows.style.display = 'block';
-            } else {
-                rows.style.display = 'none';
-            }
-        }
-           
+
     }
 
 }
