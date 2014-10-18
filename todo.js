@@ -33,7 +33,6 @@ TaskList = function () {
             tasks[i].spot = i;
         }
     }
-
     this.display = function () {
                 
         table = document.getElementById(_this.name);
@@ -61,28 +60,43 @@ TaskList = function () {
         //table.appendChild(header);
         
         header.onclick = function () {
-            
-           rows = table.rows;
-           if (rows.style.display == 'none') {
-               alert('hidden');
-                rows.style.display = 'block';
-            } else {
-                rows.style.display = 'none';
+            console.log(_this.getTasks().length);
+            for(var i = 0; i < _this.getTasks().length; i++){
+                thisTask = _this.getTasks()[i];
+                row = document.querySelector(thisTask.name + thisTask.spot);
+                
+                if (row.style.display == 'none') {
+                    alert('hidden');
+                    row.style.display = 'inline';
+               
+                } else {
+                    row.style.display = 'none';
+                
+                }
+      
             }
+           
+           
         }
             
 
         for (i = 0; i < tasks.length; i++) {
                     
             row = document.createElement('tr');
-            row.className = _this.name;
-            row.style.display = 'none';
+            //row.className = _this.name;
+            //row.style.display = 'none';
             taskPlace = document.createElement('td');
             date = document.createElement('td');
                     
 
             task = tasks[i];
+
+            row.id = task.name + task.spot;
+            
+
+            row.style.display = 'none';
             checkBox = document.createElement('input');
+            
             checkBox.type = 'checkbox';
             checkBox.id = task.spot.toString();
             checkBox.onclick = taskDone;
@@ -100,6 +114,8 @@ TaskList = function () {
     }
 
 }
+
+
 
 saveAll = function () {
     res = [];
