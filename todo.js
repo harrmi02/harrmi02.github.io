@@ -61,22 +61,22 @@ TaskList = function () {
         
         header.onclick = function () {
             console.log(_this.getTasks().length);
-            for(var i = 0; i < _this.getTasks().length; i++){
+            for (var i = 0; i < _this.getTasks().length; i++) {
                 thisTask = _this.getTasks()[i];
-                row = document.querySelector(thisTask.name + thisTask.spot);
-                
+                row = document.querySelector('#' + thisTask.projectName + thisTask.spot.toString());
+
                 if (row.style.display == 'none') {
                     alert('hidden');
                     row.style.display = 'inline';
-               
+
                 } else {
                     row.style.display = 'none';
-                
+
                 }
-      
+
             }
-           
-           
+
+
         }
             
 
@@ -91,7 +91,7 @@ TaskList = function () {
 
             task = tasks[i];
 
-            row.id = task.name + task.spot;
+            row.id = task.projectName + task.spot.toString();
             
 
             row.style.display = 'none';
