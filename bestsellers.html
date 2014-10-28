@@ -2,22 +2,24 @@
 <head>
     <title>Buy Bestselling Books</title>
 	<link rel="stylesheet" href = "" type = "text/css"/>
-	<script type = "text/javascript" src = "bestsellers.js"></script>
-    <script src="http://api.nytimes.com/svc/books/v2/lists/names.jsonp?callback=JSONPHandler&api-key=f6d1773721500a40553d9102593452db:11:70045383"></script>
+	<script type = "text/javascript" src = "bestsellers.js"></script>    
 	</head>
-<body onload = "getLists()">
-	
+<body>
+    
 	<header>
-		<h2>Buy Bestselling Books</h2>
+		<h3>Select a Times Bestseller List</h3>
 	</header>
 	<section>
 		<select id = "lists">
 		</select>
-		<button id = "select">Get List</button>
+		<button id = "select" onclick="getList()">Get List</button>
+        <script src="http://api.nytimes.com/svc/books/v2/lists/names.jsonp?callback=showLists&api-key=f6d1773721500a40553d9102593452db:11:70045383">
+        </script>
 	</section>
 	<article>
 	</article>
 	<aside>
 	</aside>
+    
 </body>
 </html>
