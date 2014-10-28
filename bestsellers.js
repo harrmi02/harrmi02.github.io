@@ -1,5 +1,6 @@
 JSONPHandler = function(data){
-	console.log(data);
+    resource = data;
+    return resource;
 }
 addOption = function(optionName, optionValue){
 	var menu = document.querySelector('select');
@@ -29,7 +30,7 @@ getLists = function(){
 		}
 	}	
 	}
-		var resource = "http://api.nytimes.com/svc/books/v2/lists/names.jsonp?callback=JSONPHandler&api-key=f6d1773721500a40553d9102593452db:11:70045383"
+		//var resource = "http://api.nytimes.com/svc/books/v2/lists/names.jsonp?callback=JSONPHandler&api-key=f6d1773721500a40553d9102593452db:11:70045383"
 		request.open('Get', resource, true);
 		request.send(null);
 }
