@@ -109,7 +109,7 @@ getListings = function () {
 
     }
 
-    var theResource = 'https://www.goodreads.com/book/title?format=JSON&key=1sYCfbFHx4QArsXHsj4tA&title=' + linkTitle;
+    var theResource = 'https://api.bookshare.org/book/search/title/' + linkTitle + ' /format/json?api_key=xjttdfbynp6w3eh9c3y4gk5e';
 
     request.open('GET', theResource, true)
 
