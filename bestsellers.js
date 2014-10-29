@@ -63,10 +63,57 @@ displayList = function (data) {
     for (var i = 0; i < resultCount; i++) {
         var bookInfo = results['results'][i]['book_details'][0];
         var newDiv = document.createElement('div');
-        newDiv.id = bookInfo['title'];
-
+        newDiv.id = bookInfo['primary_isbn13'];
+        newDiv.onclick = getListings;
         display.appendChild(newDiv);
         addListing(newDiv, bookInfo['title'], bookInfo['contributor'], bookInfo['book_image'], bookInfo['description']);
 
     }
+}
+
+showReviews = function (data) {
+    
+    console.log(data);
+    
+}
+
+getListings = function () {
+
+    var _this = this;
+    var title = _this.id;
+   var words = title.split(" ");
+    var linkTitle = "";
+
+    linkTitle += words[0];
+
+    for (var i = 1; i < words.length ; i++) {
+        linkTitle += "+";
+        linkTitle += words[i];
+    }
+
+    ////var theResource = 'https://www.goodreads.com/book/title?format=JSON&key=1sYCfbFHx4QArsXHsj4tA&title=' + linkTitle + '&callback=showReviews';
+    //var request = document.createElement('script');
+    //request.src = 'https://api.bookshare.org/book/search/title/' + linkTitle + ' /format/json?api_key=xjttdfbynp6w3eh9c3y4gk5e';
+
+    //document.querySelector('body').appendChild(request);
+
+    var request = new XMLHttpRequest()
+
+    request.onreadystatechange = function () {
+
+        if (request.readyState == 4)   //
+            if (request.status == 200) {  //successful request OK
+
+                console.log(request.responseText)
+            }
+
+    }
+
+    var theResource = 'https://www.goodreads.com/book/title?format=JSON&key=1sYCfbFHx4QArsXHsj4tA&title=' + linkTitle;
+
+    request.open('GET', theResource, true)
+
+    //request.open('GET','urlread.cgi',true)
+
+    request.send(null)
 }
