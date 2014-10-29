@@ -1,13 +1,10 @@
-﻿body {
-}
-
-article{
+﻿article{
     width: 50%;
-    float: right;
+    float: left;
 }
 
 aside{
     display: inline;
     width: 50%;
-    float: left;
+    float: right;
 }
