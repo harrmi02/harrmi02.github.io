@@ -63,7 +63,7 @@ displayList = function (data) {
     for (var i = 0; i < resultCount; i++) {
         var bookInfo = results['results'][i]['book_details'][0];
         var newDiv = document.createElement('div');
-        newDiv.id = bookInfo['primary_isbn13'];
+        newDiv.id = bookInfo['title'];
         newDiv.onclick = getListings;
         display.appendChild(newDiv);
         addListing(newDiv, bookInfo['title'], bookInfo['contributor'], bookInfo['book_image'], bookInfo['description']);
@@ -91,29 +91,65 @@ getListings = function () {
         linkTitle += words[i];
     }
 
+    var invocation = new XMLHttpRequest();
+    var url = 'https://www.goodreads.com/book/title?format=JSON&key=1sYCfbFHx4QArsXHsj4tA&title=' + linkTitle
+    var invocationHistoryText;
+
+    function callOtherDomain() {
+        if (invocation) {
+            invocation.open('GET', url, true);
+            invocation.onreadystatechange = handler;
+            invocation.send();
+            console.log('success');
+        }
+        else {
+            invocationHistoryText = "No Invocation TookPlace At All";
+            var textNode = document.createTextNode(invocationHistoryText);
+            var textDiv = document.getElementById("textDiv");
+            textDiv.appendChild(textNode);
+        }
+
+    }
+    function handler(evtXHR) {
+        if (invocation.readyState == 4) {
+            if (invocation.status == 200) {
+                var response = invocation.responseXML;
+                var invocationHistory = response.getElementsByTagName('invocationHistory').item(0).firstChild.data;
+                invocationHistoryText = document.createTextNode(invocationHistory);
+                var textDiv = document.querySelector("aside");
+                textDiv.appendChild(invocationHistoryText);
+
+            }
+            else
+                alert("Invocation Errors Occured");
+        }
+        else
+            dump("currently the application is at" + invocation.readyState);
+    }
+
+    callOtherDomain();
+
     ////var theResource = 'https://www.goodreads.com/book/title?format=JSON&key=1sYCfbFHx4QArsXHsj4tA&title=' + linkTitle + '&callback=showReviews';
     //var request = document.createElement('script');
     //request.src = 'https://api.bookshare.org/book/search/title/' + linkTitle + ' /format/json?api_key=xjttdfbynp6w3eh9c3y4gk5e';
 
     //document.querySelector('body').appendChild(request);
 
-    var request = new XMLHttpRequest()
+    //var request = new XMLHttpRequest()
 
-    request.onreadystatechange = function () {
+    //request.onreadystatechange = function () {
 
-        if (request.readyState == 4)   //
-            if (request.status == 200) {  //successful request OK
+    //    if (request.readyState == 4)   //
+    //        if (request.status == 200) {  //successful request OK
 
-                console.log(request.responseText)
-            }
+    //            console.log(request.responseText)
+    //        }
 
-    }
+    //}
 
-    var theResource = 'https://api.bookshare.org/book/search/title/' + linkTitle + ' /format/json?api_key=xjttdfbynp6w3eh9c3y4gk5e';
+    //var theResource = 'https://api.bookshare.org/book/search/title/' + linkTitle + ' /format/json?api_key=xjttdfbynp6w3eh9c3y4gk5e';
 
-    request.open('GET', theResource, true)
+    //request.open('GET', theResource, true)
 
-    //request.open('GET','urlread.cgi',true)
-
-    request.send(null)
+    //request.send(null)
 }

@@ -1,0 +1,13 @@
+﻿body {
+}
+
+article{
+    width: 50%;
+    float: right;
+}
+
+aside{
+    display: inline;
+    width: 50%;
+    float: left;
+}
