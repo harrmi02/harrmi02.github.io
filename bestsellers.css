@@ -1,17 +1,78 @@
 ﻿body {
+    background-color: #59f8b3;
 }
 
 article{
     width: 50%;
     float: left;
+    text-align: center;
 }
 
 aside{
     display: inline;
     width: 50%;
     float: right;
+    height: 88%;
+    text-align: center;
 }
 
 a{
     display: block;
+    text-decoration: none;
+   color: #f3efd9;
+}
+
+aside h2, aside p, article h2, article p{
+    color: #5a4f4f;
+}
+
+h3, h2, h4, h5, p, div h2, div p, footer{
+    color: #f3efd9;
+    font-family: Didot, 'Didot LT STD', 'Hoefler Text', Garamond, 'Times New Roman', serif;
+}
+
+div:link{
+    color: #5a4f4f;
+}
+
+.wiki:hover{
+    background-color: #244939;
+}
+
+a:visited{
+    color: #a687f3;
+}
+
+div{
+    background-color: #428567;
+    margin: 2%;
+    border-radius: 25px;
+    text-align: center;
+    position: relative;
+}
+
+.wiki{
+    height: 60px;
+    font-size: 18pt;
+}
+
+img{
+    width: 20%;
+    position: relative;
+    margin: 1%;
+}
+
+footer{
+    height: 20px;
+    width: 100%;
+    background-color: #428567;
+    clear: both;
+    text-align: center;
+    border-radius: 5px;
+}
+header{
+    background-color: #428567;
+    text-align:center;
+    border-radius: 10px;
+    height: 70px;
 }

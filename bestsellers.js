@@ -20,9 +20,9 @@ addListing = function(section, title, author, imageURL, description){
     summary.innerHTML = description;
     image.src = imageURL;
 
+    page.appendChild(image);
     page.appendChild(header);
     page.appendChild(subHeading);
-    page.appendChild(image);
     page.appendChild(summary);
 
 }
@@ -53,17 +53,21 @@ displayList = function (data) {
     var display = document.querySelector('article');
     var resultCount = results['num_results'];
     var title = document.createElement('h2');
+    var note = document.createElement('p');
 
     display.innerHTML = "";
 
     title.innerHTML = results['results'][0]['display_name'];
+    note.innerHTML = "Click on a book to see related articles."
 
     display.appendChild(title);
+    display.appendChild(note);
 
     for (var i = 0; i < resultCount; i++) {
         var bookInfo = results['results'][i]['book_details'][0];
         var newDiv = document.createElement('div');
         newDiv.id = bookInfo['title'];
+        newDiv.class = bookInfo['author'];
         newDiv.onclick = getListings;
         display.appendChild(newDiv);
         addListing(newDiv, bookInfo['title'], bookInfo['contributor'], bookInfo['book_image'], bookInfo['description']);
@@ -74,11 +78,15 @@ displayList = function (data) {
 addResult = function (title, url) {
     var display = document.querySelector('aside');
     var label = document.createElement('a');
+    var newDiv = document.createElement('div');
+
+    display.appendChild(newDiv);
+    newDiv.className = 'wiki';
 
     label.innerHTML = title;
     label.href = url;
 
-    display.appendChild(label);
+    newDiv.appendChild(label);
 }
 
 showResults = function (data) {
@@ -87,11 +95,14 @@ showResults = function (data) {
     var entries = result['entities'];
     var section = document.querySelector('aside');
     var header = document.createElement('h2');
+    var note = document.createElement('p');
 
     section.innerHTML = " ";
 
     header.innerHTML = "Related Wikipedia Entries";
+    note.innerHTML = "Click an article title to view."
     section.appendChild(header);
+    section.appendChild(note);
 
     for (var i = 0; i < count; i++) {
         var current = entries[i];
@@ -106,9 +117,10 @@ showResults = function (data) {
 getListings = function () {
     var _this = this;
     var title = _this.id;
+    var author = _this.class;
 
     var request = document.createElement('script');
-    request.src = 'https://api.dandelion.eu/datagraph/wikisearch/v1/?text=' + title + ' book&lang=en&$app_id=322cf916&$app_key=75522934ebd3d44f6c309111acafb0d8&callback=showResults';
+    request.src = 'https://api.dandelion.eu/datagraph/wikisearch/v1/?text=' + title + ' &lang=en&$app_id=322cf916&$app_key=75522934ebd3d44f6c309111acafb0d8&callback=showResults';
 
     var page = document.querySelector('body')
         page.appendChild(request);
