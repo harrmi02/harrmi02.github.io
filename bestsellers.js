@@ -73,6 +73,7 @@ displayList = function (data) {
         addListing(newDiv, bookInfo['title'], bookInfo['contributor'], bookInfo['book_image'], bookInfo['description']);
 
     }
+
 }
 
 addResult = function (title, url) {
@@ -91,7 +92,7 @@ addResult = function (title, url) {
 
 showResults = function (data) {
     var result = data;
-    var count = result['count'];
+    var count = 10;
     var entries = result['entities'];
     var section = document.querySelector('aside');
     var header = document.createElement('h2');
@@ -120,7 +121,7 @@ getListings = function () {
     var author = _this.class;
 
     var request = document.createElement('script');
-    request.src = 'https://api.dandelion.eu/datagraph/wikisearch/v1/?text=' + title + ' &lang=en&$app_id=322cf916&$app_key=75522934ebd3d44f6c309111acafb0d8&callback=showResults';
+    request.src = 'https://api.dandelion.eu/datagraph/wikisearch/v1/?text=' + title + ' &lang=en&limit=10&$app_id=322cf916&$app_key=75522934ebd3d44f6c309111acafb0d8&callback=showResults';
 
     var page = document.querySelector('body')
         page.appendChild(request);

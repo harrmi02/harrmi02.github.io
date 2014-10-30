@@ -1,5 +1,13 @@
 ﻿body {
     background-color: #59f8b3;
+    min-height: 99%;
+    position: relative;
+    padding: 1px;
+    margin: 1px;
+}
+
+html{
+    height: 100%;
 }
 
 article{
@@ -12,7 +20,7 @@ aside{
     display: inline;
     width: 50%;
     float: right;
-    height: 88%;
+    
     text-align: center;
 }
 
@@ -64,11 +72,14 @@ img{
 
 footer{
     height: 20px;
-    width: 100%;
+    width: 99%;
     background-color: #428567;
     clear: both;
-    text-align: center;
+    text-align: right;
     border-radius: 5px;
+    position: fixed;
+    bottom: 2px;
+    z-index: -3;
 }
 header{
     background-color: #428567;
