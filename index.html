@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/material.min.css">
+    <link rel="stylesheet" href="./css/palette.css">
     <script src="./css/material.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     
@@ -16,10 +17,14 @@
           position: relative;
           left: 5%;
         }
-        .showDesc span{
+        .mdl-cell--3-col{
+          position: relative;
+         
+        }
+       
+        .mdl-cell--3-col span{
           position: absolute;
           bottom: 0;
-          right: 5%;
         }
         .showInfo{
           margin-top:0%;
@@ -38,7 +43,7 @@
   locked at the top -->
 <div class="mdl-layout mdl-js-layout">
   <header class="mdl-layout__header mdl-layout__header--scroll">
-    <div class="mdl-layout__header-row">
+    <div class="mdl-layout__header-row dark-primary-color">
       <!-- Title -->
       <span class="mdl-layout-title">Miriam Harries</span>
       <!-- Add spacer, to align navigation to the right -->
@@ -60,10 +65,15 @@
     </nav>
   </div>
   <main class="mdl-layout__content">
-    <div class="page-content">
+    <div class="page-content light-primary-color">
         <div class="mdl-grid">
           
-          <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-shadow--4dp">
+          <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-shadow--4dp default-primary-color text-primary-color">
+            <span>Photo by Brittany Todd
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect">
+              Photography by Brittany
+            </button>
+            </span>
             <div class="showDesc">
             
             <h3 class="showTitle">Love & Information</h3>
@@ -75,7 +85,7 @@
                      
             </div>
             </div>
-            <div class="mdl-cell mdl-cell--9-col mdl-cell--6-col-tablet mdl-shadow--6dp">
+            <div class="mdl-cell mdl-cell--9-col mdl-cell--6-col-tablet mdl-shadow--6dp accent-color">
               <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
                 <div class="mdl-tabs__tab-bar">
                     <a href="#loveinfo1" class="mdl-tabs__tab is-active">Image 1</a>
@@ -93,9 +103,9 @@
             </div>
         </div>
         <div class="mdl-grid">
-          <div class="mdl-cell mdl-cell--9-col mdl-cell--6-col-tablet mdl-shadow--6dp">
+          <div class="mdl-cell mdl-cell--9-col mdl-cell--6-col-tablet mdl-shadow--6dp accent-color ">
             <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
-                <div class="mdl-tabs__tab-bar">
+                <div class="mdl-tabs__tab-bar text-primary-color">
                     <a href="#meta1" class="mdl-tabs__tab is-active">Image 1</a>
                     <a href="#meta2" class="mdl-tabs__tab">Image 2</a>
                     <a href="#meta3" class="mdl-tabs__tab">Image 3</a>
@@ -112,7 +122,12 @@
                 </div>
               </div>
             </div>
-          <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-shadow--4dp">
+          <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-shadow--4dp default-primary-color text-primary-color" >
+            <span>Photo by Brittany Todd
+              <button class="mdl-button mdl-js-button mdl-js-ripple-effect">
+              Photography by Brittany
+            </button>
+            </span>
             <div class="showDesc">
             
             <h3 class="showTitle">Metamorphoses</h3>
@@ -126,7 +141,12 @@
         </div>
         <div class="mdl-grid">
           
-          <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-shadow--4dp">
+          <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-shadow--4dp default-primary-color text-primary-color">
+            <span>Photo by Brittany Todd
+              <button class="mdl-button mdl-js-button mdl-js-ripple-effect">
+              Photography by Brittany
+            </button>
+            </span>
             <div class="showDesc">
             <h3 class="showTitle">In the Next Room, or, The Vibrator Play</h3>
             <h6 class="showInfo">Luther College Visual & Performing Arts</h6>
@@ -136,7 +156,7 @@
                    
             </div>
             </div>
-            <div class="mdl-cell mdl-cell--9-col mdl-cell--6-col-tablet mdl-shadow--6dp">
+            <div class="mdl-cell mdl-cell--9-col mdl-cell--6-col-tablet mdl-shadow--6dp accent-color">
             <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
                 <div class="mdl-tabs__tab-bar">
                     <a href="#vibe1" class="mdl-tabs__tab is-active">Image 1</a>
@@ -157,7 +177,7 @@
             </div>
         </div>
         <div class="mdl-grid">
-          <div class="mdl-cell mdl-cell--9-col mdl-cell--6-col-tablet mdl-shadow--6dp">
+          <div class="mdl-cell mdl-cell--9-col mdl-cell--6-col-tablet mdl-shadow--6dp accent-color">
             <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
                 <div class="mdl-tabs__tab-bar">
                     <a href="#dispute1" class="mdl-tabs__tab is-active">Image 1</a>
@@ -172,7 +192,12 @@
                 </div>
               </div>
             </div>
-          <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-shadow--4dp">
+          <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-shadow--4dp default-primary-color text-primary-color">
+            <span>Photo by Brittany Todd
+              <button class="mdl-button mdl-js-button mdl-js-ripple-effect">
+              Photography by Brittany
+            </button>
+            </span>
             <div class="showDesc">
             <h3 class="showTitle">La Dispute</h3>
             <h6 class="showInfo">Luther College Visual & Performing Arts</h6>
@@ -184,7 +209,12 @@
         </div>
         <div class="mdl-grid">
           
-          <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-shadow--4dp">
+          <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-shadow--4dp default-primary-color text-primary-color">
+            <span>Photo by Brittany Todd
+              <button class="mdl-button mdl-js-button mdl-js-ripple-effect">
+              Photography by Brittany
+            </button>
+            </span>
             <div class="showDesc">
             <h3 class="showTitle">Proof</h3>
             <h6 class="showInfo">Luther College Visual & Performing Arts</h6>
@@ -194,7 +224,7 @@
                    
             </div>
             </div>
-            <div class="mdl-cell mdl-cell--9-col mdl-cell--6-col-tablet mdl-shadow--6dp">
+            <div class="mdl-cell mdl-cell--9-col mdl-cell--6-col-tablet mdl-shadow--6dp accent-color"> 
             <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
                 <div class="mdl-tabs__tab-bar">
                     <a href="#proof1" class="mdl-tabs__tab is-active">Image 1</a>
@@ -215,7 +245,7 @@
             </div>
         </div>
         <div class="mdl-grid">
-          <div class="mdl-cell mdl-cell--9-col mdl-cell--6-col-tablet mdl-shadow--6dp">
+          <div class="mdl-cell mdl-cell--9-col mdl-cell--6-col-tablet mdl-shadow--6dp accent-color">
             <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
                 <div class="mdl-tabs__tab-bar">
                     <a href="#arcadia1" class="mdl-tabs__tab is-active">Image 1</a>
@@ -230,7 +260,12 @@
                 </div>
               </div>
             </div>
-          <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-shadow--4dp">
+          <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-shadow--4dp default-primary-color text-primary-color">
+            <span>Photo by Brittany Todd
+              <button class="mdl-button mdl-js-button mdl-js-ripple-effect">
+              Photography by Brittany
+            </button>
+            </span>
             <div class="showDesc">
             <h3 class="showTitle">Arcadia</h3>
             <h6 class="showInfo">Luther College Visual & Performing Arts</h6>
