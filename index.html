@@ -1,10 +1,35 @@
 ﻿<!Doctype html>
 
 <head>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/material.min.css">
     <script src="./css/material.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    <style>
+        .showTitle{
+          font-style: italic;
+          margin-bottom: 1%;
+        }   
+        .showDesc{
+          position: relative;
+          left: 5%;
+        }
+        .showDesc span{
+          position: absolute;
+          bottom: 0;
+          right: 5%;
+        }
+        .showInfo{
+          margin-top:0%;
+          margin-bottom: 1%;
+          padding-right:5%;
+          position: relative;
+          left: 8%;
+          max-width: 82%;
+        }
+    </style>
     <title>Miriam Harries</title>
 </head>
 
@@ -39,43 +64,183 @@
         <div class="mdl-grid">
           
           <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-shadow--4dp">
-            <div style="padding:10%">
-            <h3>California</h3>
-            <dl>
-              <dt>Driver, Photographer</dt>
-              <dd>Mountain Driving</dd>
-              <dd>Photography</dd>
-            </dl>
+            <div class="showDesc">
+            
+            <h3 class="showTitle">Love & Information</h3>
+            <h6 class="showInfo">Luther College Visual & Performing Arts</h6>
+            <p class="showInfo">Photo by Brittany Todd, Photography by Brittany</p>
+            <div>
+            <h5>Stage Manager, Scenic Builder</h5>
+            </div>
+                     
             </div>
             </div>
             <div class="mdl-cell mdl-cell--9-col mdl-cell--6-col-tablet mdl-shadow--6dp">
-            <img src="img/header.jpg" width="100%" height="100%"/>
+              <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+                <div class="mdl-tabs__tab-bar">
+                    <a href="#loveinfo1" class="mdl-tabs__tab is-active">Image 1</a>
+                    <a href="#loveinfo2" class="mdl-tabs__tab">Image 2</a>
+                </div>
+              
+                <div class="mdl-tabs__panel is-active" id="loveinfo1">
+                  <img src="img/portfolio/LoveAndInformation.jpg" style="width:100%"/>
+                </div>
+                <div class="mdl-tabs__panel" id="loveinfo2">
+                  <img src="img/portfolio/LoveAndInfo1.jpg" width="42%" style="position:relative; left:30%"/>
+                </div>
+                
+              </div>
             </div>
         </div>
         <div class="mdl-grid">
           <div class="mdl-cell mdl-cell--9-col mdl-cell--6-col-tablet mdl-shadow--6dp">
-            <img src="img/header.jpg" width="100%" height="100%"/>
+            <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+                <div class="mdl-tabs__tab-bar">
+                    <a href="#meta1" class="mdl-tabs__tab is-active">Image 1</a>
+                    <a href="#meta2" class="mdl-tabs__tab">Image 2</a>
+                    <a href="#meta3" class="mdl-tabs__tab">Image 3</a>
+                </div>
+              
+                <div class="mdl-tabs__panel is-active" id="meta1">
+                  <img src="img/portfolio/Metamorphoses.jpg" style="width:100%"/>
+                </div>
+                <div class="mdl-tabs__panel" id="meta2">
+                  <img src="img/portfolio/Meta3.jpg" width="100%"/>
+                </div>
+                <div class="mdl-tabs__panel" id="meta3">
+                  <img src="img/portfolio/Meta2.jpg" width="100%"/>
+                </div>
+              </div>
             </div>
           <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-shadow--4dp">
-            <h3>California</h3>
-            <ul>
-              <li>Role: Traveller, Photographer</li>
-              <li>Accomplishments: Drove across US, took pictures</li>
-            </ul> 
+            <div class="showDesc">
+            
+            <h3 class="showTitle">Metamorphoses</h3>
+            <h6 class="showInfo">Luther College Visual & Performing Arts</h6>
+            <div>
+            <h5>Assistant Stage Manager, Scenic Builder</h5>
+            </div>
+                     
+            </div>
             </div>
         </div>
         <div class="mdl-grid">
           
           <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-shadow--4dp">
-            <h3>California</h3>
-            <ul>
-              <li>Role: Traveller, Photographer</li>
-              <li>Accomplishments: Drove across US, took pictures</li>
-            </ul> 
+            <div class="showDesc">
+            <h3 class="showTitle">In the Next Room, or, The Vibrator Play</h3>
+            <h6 class="showInfo">Luther College Visual & Performing Arts</h6>
+            <div>
+            <h5>Annie, Scenic Builder</h5>
+            </div>
+                   
+            </div>
             </div>
             <div class="mdl-cell mdl-cell--9-col mdl-cell--6-col-tablet mdl-shadow--6dp">
-            <img src="img/header.jpg" width="100%" height="100%"/>
+            <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+                <div class="mdl-tabs__tab-bar">
+                    <a href="#vibe1" class="mdl-tabs__tab is-active">Image 1</a>
+                    <a href="#vibe2" class="mdl-tabs__tab">Image 2</a>
+                    <a href="#vibe3" class="mdl-tabs__tab">Image 3</a>
+                </div>
+              
+                <div class="mdl-tabs__panel is-active" id="vibe1">
+                  <img src="img/portfolio/Vibrator3.jpg" style="width:100%"/>
+                </div>
+                <div class="mdl-tabs__panel" id="vibe2">
+                  <img src="img/portfolio/Vibrator1LG.jpg" width="100%"/>
+                </div>
+                <div class="mdl-tabs__panel" id="vibe3">
+                  <img src="img/portfolio/VibratorLG.jpg" width="100%"/>
+                </div>
+              </div>
             </div>
+        </div>
+        <div class="mdl-grid">
+          <div class="mdl-cell mdl-cell--9-col mdl-cell--6-col-tablet mdl-shadow--6dp">
+            <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+                <div class="mdl-tabs__tab-bar">
+                    <a href="#dispute1" class="mdl-tabs__tab is-active">Image 1</a>
+                    <a href="#dispute2" class="mdl-tabs__tab">Image 2</a>
+                </div>
+              
+                <div class="mdl-tabs__panel is-active" id="dispute1">
+                  <img src="img/portfolio/LaDispute1.jpg" style="width:100%"/>
+                </div>
+                <div class="mdl-tabs__panel" id="dispute2">
+                  <img src="img/portfolio/LaDisputeRiver.jpg" width="100%"/>
+                </div>
+              </div>
+            </div>
+          <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-shadow--4dp">
+            <div class="showDesc">
+            <h3 class="showTitle">La Dispute</h3>
+            <h6 class="showInfo">Luther College Visual & Performing Arts</h6>
+            <div>
+            <h5>Scenic Builder</h5>
+            </div>    
+            </div>
+            </div>   
+        </div>
+        <div class="mdl-grid">
+          
+          <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-shadow--4dp">
+            <div class="showDesc">
+            <h3 class="showTitle">Proof</h3>
+            <h6 class="showInfo">Luther College Visual & Performing Arts</h6>
+            <div>
+            <h5>Catharine, Scenic Builder</h5>
+            </div>
+                   
+            </div>
+            </div>
+            <div class="mdl-cell mdl-cell--9-col mdl-cell--6-col-tablet mdl-shadow--6dp">
+            <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+                <div class="mdl-tabs__tab-bar">
+                    <a href="#proof1" class="mdl-tabs__tab is-active">Image 1</a>
+                    <a href="#proof2" class="mdl-tabs__tab">Image 2</a>
+                    <a href="#proof3" class="mdl-tabs__tab">Image 3</a>
+                </div>
+              
+                <div class="mdl-tabs__panel is-active" id="proof1">
+                  <img src="img/portfolio/Proof2.jpg" style="width:100%"/>
+                </div>
+                <div class="mdl-tabs__panel" id="proof2">
+                  <img src="img/portfolio/Proof1.jpg" width="100%"/>
+                </div>
+                <div class="mdl-tabs__panel" id="proof3">
+                  <img src="img/portfolio/Proof3.jpg" width="100%"/>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="mdl-grid">
+          <div class="mdl-cell mdl-cell--9-col mdl-cell--6-col-tablet mdl-shadow--6dp">
+            <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+                <div class="mdl-tabs__tab-bar">
+                    <a href="#arcadia1" class="mdl-tabs__tab is-active">Image 1</a>
+                    <a href="#arcadia2" class="mdl-tabs__tab">Image 2</a>
+                </div>
+              
+                <div class="mdl-tabs__panel is-active" id="arcadia1">
+                  <img src="img/portfolio/Arcadia1.jpg" style="width:100%"/>
+                </div>
+                <div class="mdl-tabs__panel" id="arcadia2">
+                  <img src="img/portfolio/Arcadia2.jpg" width="100%"/>
+                </div>
+              </div>
+            </div>
+          <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-shadow--4dp">
+            <div class="showDesc">
+            <h3 class="showTitle">Arcadia</h3>
+            <h6 class="showInfo">Luther College Visual & Performing Arts</h6>
+            <div>
+            <h5>Prop Master, Scenic Builder</h5>
+            </div>
+                   
+            </div>
+            </div>
+            
         </div>
     </div>
   </main>
