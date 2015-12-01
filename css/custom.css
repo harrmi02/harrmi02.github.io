@@ -1,0 +1,50 @@
+.image-card.mdl-card {
+	width:100%;
+	height: 540px;
+	display: inline-flex;
+	
+	color: #212121;
+	overflow: hidden;
+	cursor: pointer;
+	outline: 0;
+	border: 0;
+	border-radius: 0;
+	-webkit-transition: all 0.15s ease-in-out;
+	-o-transition: all 0.15s ease-in-out;
+	transition: all 0.15s ease-in-out;
+}
+
+.image-card:hover,
+.image-card:active,
+.image-card.active,
+.image-card:focus,
+.image-card:active:focus,
+.image-card.active:focus {
+	-webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.64), 0 3px 6px rgba(0, 0, 0, 0.23);
+	-moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.64), 0 3px 6px rgba(0, 0, 0, 0.23);
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.64), 0 3px 6px rgba(0, 0, 0, 0.23);
+
+}
+.showTitle{
+	font-style: italic;
+	margin-bottom: 1%;
+	text-align: center;
+	
+	font-size: 28px;
+	font-weight: 500;
+}   
+.showDesc{
+	position: relative;
+	margin-left: 2.5%;
+	text-align: center;
+	
+}
+.showInfo{
+	margin-top:0%;
+	margin-bottom: 1%;
+	padding-right:5%;
+	position: relative;
+	padding-left: 4%;
+	max-width: 95%;
+	text-align: center;
+}
