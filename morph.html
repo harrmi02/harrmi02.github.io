@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>CodePen - Material Design Papersheet Example</title>
+
+  <link rel="stylesheet" href="css/normalize.css">
+
+    <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+<link rel="stylesheet" href="./css/material.min.css">
+<link rel="stylesheet" href="./css/palette.css">
+<script src="./js/material.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="./css/custom.css">
+</head>
+
+<body>
+
+  <!-- Fixed Container -->
+<div class="container">
+
+  <!-- Bubble element with z=1 shadow -->
+  <div href="#" class="papersheet">
+
+    <!-- Papersheet content wrapper -->
+    <div class="papersheet-content">
+
+      <img src="img/portfolio/LoveAndInformation.jpg" width="100%">
+    </div>
+
+    <!-- Controls Bar -->
+    
+    <div class="papersheet-controls">
+      <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+                <div class="mdl-tabs__tab-bar">
+                    <a href="#loveinfo1" class="mdl-tabs__tab is-active">Image 1</a>
+                    <a href="#loveinfo2" class="mdl-tabs__tab">Image 2</a>
+                    <a href="#loveinfoabout" class="mdl-tabs__tab">About</a>
+                </div>
+              
+                <div class="mdl-tabs__panel is-active" id="loveinfo1">
+                  <img src="img/portfolio/LoveAndInformation.jpg" style="width:100%"/>
+                </div>
+                <div class="mdl-tabs__panel" id="loveinfo2">
+                  <img src="img/portfolio/LoveAndInfo1.jpg" width="42%" style="position:relative; left:30%"/>
+                </div>
+                <div class="mdl-tabs__panel" id="loveinfoabout">
+                  <h3 class="showTitle">Love & Information</h3>
+                  <h6 class="showInfo">Fall 2015<hr/></h6>
+                  <div>
+                  <h5>Stage Manager, Scenic Builder</h5>
+                  <h6>Luther College Visual & Performing Arts</h6>
+                  </div>
+                </div>
+              </div>
+        <button class="papersheet-controls__button -primary">OK</button>
+        <button class="papersheet-controls__button">ANNULLA</button>
+    </div>
+
+  </div>
+</div>
+
+  <script src='http://codepen.io/assets/libs/fullpage/jquery.js'></script>
+
+  <script src="js/index.js"></script>
+
+</body>
+
+</html>
