@@ -20,6 +20,7 @@
 .image-card:focus,
 .image-card:active:focus,
 .image-card.active:focus {
+  padding: 2%;
 	-webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.64), 0 3px 6px rgba(0, 0, 0, 0.23);
 	-moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.64), 0 3px 6px rgba(0, 0, 0, 0.23);
 	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.64), 0 3px 6px rgba(0, 0, 0, 0.23);
@@ -40,9 +41,9 @@
 }  
 
 .showDesc{
-	position: relative;
-	margin-left: 2.5%;
-	text-align: center;
+	padding-left: 2%;
+  padding-right: 2%;
+  margin-top: 0%;
 	
 }
 .showInfo{
