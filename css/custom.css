@@ -21,9 +21,9 @@
 .image-card:active:focus,
 .image-card.active:focus {
   padding: 2%;
-  -moz-box-shadow:    inset 0 0 20px #FFFFFF;
-   -webkit-box-shadow: inset 0 0 20px #FFFFFF;
-   box-shadow:         inset 0 0 20px #FFFFFF;
+  -moz-box-shadow:    inset 0 0 20px #CFD8DC;
+   -webkit-box-shadow: inset 0 0 20px #CFD8DC;
+   box-shadow:         inset 0 0 20px #CFD8DC;
    
    -webkit-transition: all 0.2s linear;
     -o-transition: all 0.2s linear;
