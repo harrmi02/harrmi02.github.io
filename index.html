@@ -14,7 +14,7 @@
 
 <body onload="loadFunctions()">
 <div class="mdl-layout mdl-js-layout">
-  <header class="mdl-layout__header mdl-layout__header--scroll">
+  <header id="header" class="mdl-layout__header mdl-layout__header--scroll">
     <div class="mdl-layout__header-row dark-primary-color">
       <!-- Title -->
       <span class="mdl-layout-title">Miriam Harries</span>
@@ -22,18 +22,14 @@
       <div class="mdl-layout-spacer"></div>
       <!-- Navigation -->
       <nav class="mdl-navigation">
-        <a class="mdl-navigation__link" href="about.html">About</a>
         <a class="mdl-navigation__link" href="https://github.com/harrmi02">GitHub</a>
-        <a class="mdl-navigation__link" href="">Contact</a>
       </nav>
     </div>
   </header>
   <div class="mdl-layout__drawer">
     <span class="mdl-layout-title">Miriam Harries</span>
     <nav class="mdl-navigation">
-      <a class="mdl-navigation__link" href="about.html">About</a>
       <a class="mdl-navigation__link" href="https://github.com/harrmi02">GitHub</a>
-      <a class="mdl-navigation__link" href="">Contact</a>
     </nav>
   </div>
   
@@ -44,58 +40,176 @@
         <div id="limodal" class="modal mdl-shadow--4dp light-primary-color">
             
           <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect primary-text-color">
+            <!-- Icon button -->
+          
             <div class="mdl-tabs__tab-bar">
-                    <a href="#loveinfo1" class="mdl-tabs__tab is-active">Image 1</a>
-                    <a href="#loveinfo2" class="mdl-tabs__tab">Image 2</a>
-                    <a href="#loveinfoabout" class="mdl-tabs__tab">About</a>
-                </div>
+                    <a href="#loveinfo1" class="mdl-tabs__tab is-active">Collaboration</a>
+                    <a href="#loveinfo2" class="mdl-tabs__tab">Organization</a>
+                    <a href="#loveinfo3" class="mdl-tabs__tab">Coordination</a>
+                    <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
+                      <i class="material-icons">highlight_off</i>
+                    </button>
+                    </div> 
               
                 <div class="mdl-tabs__panel is-active" id="loveinfo1">
-                  <img src="img/portfolio/LoveAndInformation.jpg" style="width:100%"/>
-                </div>
-                <div class="mdl-tabs__panel" id="loveinfo2">
-                  <img src="img/portfolio/LoveAndInfo1.jpg" width="55%" style="position:relative; left:22%"/>
-                </div>
-                <div class="mdl-tabs__panel" id="loveinfoabout">
-                  <h3 class="showTitle">Love & Information</h3>
-                  <h6 class="showInfo">Fall 2015<hr class="dark-primary-color"/></h6>
-                  <div class="showInfo">
-                  <h5>Stage Manager</h5>
-                  <h6 style="margin-bottom: 1%; margin-top:1%;">Luther College Visual & Performing Arts</h6>
-                  </div><div class="showDesc">
-                  <p>Over the course of 90 minutes, Caryl Churchill’s Love and Information offers the audience more than 50 brief glimpses of the human experience. The unique challenge of this show, beyond the versatility required of the actors, is the ingenuity and responsiveness required of everyone involved in the production. Churchill’s script contains only dialogue, scene titles, and a few briefs notes. The given circumstances, from setting to subtext to scene order, are left entirely up to the creative team and cast. Due to the wide variation in settings, we opted for a simple, slightly abstract set that could easily suggest a wide variety of locations. We relied on lighting, projections, sound cues, costumes, and the actors to provide the specific context of each scene.
-                  </p><p>As the stage manager, I acted as the memory of the show and ensured clear and consistent communication between the various people involved in the show. During the rehearsal process, I spent much of my time maintaining a massive spreadsheet that was shared between the members of the production staff. We used the spreadsheet to keep track of any decisions that the director and cast made regarding the setting and characters of each scene. The designers then used it to track the various technical elements that each scene would need. Additionally, I sent out rehearsal reports to the cast and production staff after each rehearsal explaining what the cast had worked on and detailing any new decisions or changes that had come up. In this way, I kept the production staff up to date and tracked each decision in case we needed to refer back later on. Outside of rehearsal, I assisted in building the set by assembling and connecting the platforms that made up the structure of the stage, painting the set, and assisting in the placement of the vertical poles. During the run of the show, I was responsible for calling the light, sound, and projection cues to smoothly transition between each scene.
-                  </p>
+                  <div class="mdl-card modal-card light-primary-color ">
+                    
+                    <div class="mdl-card__media">
+                      <img src="img/portfolio/LoveAndInformation.jpg" style="width:100%"/>
+                    </div>
+                    <div class="mdl-card__supporting-text primary-text-color">
+                      As the stage manager for Love and Information at Luther College, I coordinated designers, performers, and technicians during rehearsal and performances.
+                      </div>
                   </div>
                 </div>
+                <div class="mdl-tabs__panel" id="loveinfo2">
+                  <div class="mdl-card modal-card light-primary-color">
+                    
+                    <div class="mdl-card__media">
+                      <img src="img/portfolio/Spreadsheet.png" style="width=100%"/>
+                    </div>
+                    <div class="mdl-card__supporting-text primary-text-color">
+                      As the stage manager for Love and Information at Luther College, I coordinated designers, performers, and technicians during rehearsal and performances.
+                      </div>
+                  </div>
+                </div>
+                  <div class="mdl-tabs__panel" id="loveinfo3">
+                  <div class="mdl-card modal-card light-primary-color">
+                    
+                    <div class="mdl-card__media">
+                      <img src="img/portfolio/Script.jpg" style="width:100%"/>
+                    </div>
+                    <div class="mdl-card__supporting-text primary-text-color">
+                      As the stage manager for Love and Information at Luther College, I coordinated designers, performers, and technicians during rehearsal and performances.
+                      </div>
+                  </div>
+                </div>
+                
+              </div>
+        </div>
+        
+         <div id="spinmodal" class="modal mdl-shadow--4dp light-primary-color" style="min-width:50%">
+            
+          <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect primary-text-color">
+            <!-- Icon button -->
+          
+            <div class="mdl-tabs__tab-bar no-tabs">
+                    <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
+                      <i class="material-icons">highlight_off</i>
+                    </button>
+                    </div> 
+              
+                <div class="mdl-tabs__panel is-active" id="spinPanel">
+                  <div class="mdl-card modal-card light-primary-color ">
+                    
+                    <div class="mdl-card__media">
+                      <img src="img/portfolio/SPINboard.jpg" style="width:100%"/>
+                    </div>
+                    <div class="mdl-card__supporting-text primary-text-color">
+                      As technical director...
+                      </div>
+                  </div>
+                </div>               
+              </div>
+        </div>
+        
+         <div id="seniormodal" class="modal mdl-shadow--4dp light-primary-color">
+            
+          <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect primary-text-color">
+         
+            <div class="mdl-tabs__tab-bar">
+                    <a href="#sp1" class="mdl-tabs__tab is-active">Collaboration</a>
+                    <a href="#sp2" class="mdl-tabs__tab">Initiative</a>
+                    <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
+                      <i class="material-icons">highlight_off</i>
+                    </button>
+                </div>
+              
+                <div class="mdl-tabs__panel is-active" id="sp1">
+                  <div class="mdl-card modal-card light-primary-color">
+                    
+                    <div class="mdl-card__media">
+                      <img src="img/portfolio/SeniorProject.jpg" style="width:100%"/>
+                    </div>
+                    <div class="mdl-card__supporting-text primary-text-color">
+                      For my senior project at Luther college...
+                      </div>
+                  </div>
+                  
+                </div>
+                <div class="mdl-tabs__panel" id="sp2">
+                  <div class="mdl-card modal-card light-primary-color">
+                    
+                    <div class="mdl-card__media">
+                      <img src="img/portfolio/LostandFound.png" style="width:100%"/>
+                    </div>
+                    <div class="mdl-card__supporting-text primary-text-color">
+                      For my senior project at Luther College...
+                      </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+        
+        <div id="ibmmodal" class="modal mdl-shadow--4dp light-primary-color">
+            
+          <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect primary-text-color">
+            <!-- Icon button -->
+          
+            <div class="mdl-tabs__tab-bar no-tabs">
+                    <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
+                      <i class="material-icons">highlight_off</i>
+                    </button>
+                    </div> 
+              
+                <div class="mdl-tabs__panel is-active" id="ibmPanel">
+                  <div class="mdl-card modal-card light-primary-color ">
+                    
+                    <div class="mdl-card__media">
+                      <img src="img/portfolio/cloud (2).jpg" style="width:100%"/>
+                    </div>
+                    <div class="mdl-card__supporting-text primary-text-color">
+                      My summer 2015 internship with IBM Cloud...
+                      </div>
+                  </div>
+                </div>               
               </div>
         </div>
         
         <div id="metamodal" class="modal mdl-shadow--4dp light-primary-color">
             
           <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect primary-text-color">
+         
             <div class="mdl-tabs__tab-bar">
-                    <a href="#meta1" class="mdl-tabs__tab is-active">Image 1</a>
-                    <a href="#meta2" class="mdl-tabs__tab">Image 2</a>
-                    <a href="#metaabout" class="mdl-tabs__tab">About</a>
+                    <a href="#meta1" class="mdl-tabs__tab is-active">Direction</a>
+                    <a href="#meta2" class="mdl-tabs__tab">Preparation</a>
+                    <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
+                      <i class="material-icons">highlight_off</i>
+                    </button>
                 </div>
               
                 <div class="mdl-tabs__panel is-active" id="meta1">
-                  <img src="img/portfolio/Meta2.jpg" style="width:100%"/>
+                  <div class="mdl-card modal-card light-primary-color">
+                    
+                    <div class="mdl-card__media">
+                      <img src="img/portfolio/MetaCandles.jpg" style="width:100%"/>
+                    </div>
+                    <div class="mdl-card__supporting-text primary-text-color">
+                      As an Assistant Stage Manager...
+                      </div>
+                  </div>
+                  
                 </div>
                 <div class="mdl-tabs__panel" id="meta2">
-                  <img src="img/portfolio/Meta3.jpg" width="100%"/>
-                </div>
-                <div class="mdl-tabs__panel" id="metaabout">
-                  <h3 class="showTitle">Metamorphoses</h3>
-                  <h6 class="showInfo">Spring 2015<hr class="dark-primary-color"/></h6>
-                  <div class="showInfo">
-                  <h5>Assistant Stage Manager</h5>
-                  <h6 style="margin-bottom: 1%; margin-top:1%;">Luther College Visual & Performing Arts</h6>
-                  </div><div class="showDesc"><p>
-                  This play, adapted from Ovid’s poem by Mary Zimmerman, guides the audience through a series of mythical tales thematically centered on transformation and literally centered on and in a pool of water. The primary technical challenge of the show was, of course, the use of water and all that it entails. Our pool was four feet deep in the center with three shallower levels on each side. It was surrounded by two feet of platform on all sides, except for the ramp in the center of the upstage side which was flanked by two elaborate archways. The ramp covered an underwater entrance for the actors, and the archways were decorated to look like they were mid-transformation.
-                  </p><p>As one of two assistant stage managers, my primary focus was on preparing the understudies to go on for any role. At the beginning of each rehearsal, I led warmups for the full cast. During the first few weeks of rehearsal, I recorded the blocking of each scene as it was established in order to act as a reference so that the understudies could check the accuracy of their own notes. I had regular discussions with the understudies to discuss their thoughts and questions and to help them set goals for memorization. As the performances drew closer and the blocking became consistent, I used the rehearsal time to coach the understudies separately on the scenes they were most likely to perform. In addition, I assisted in the construction of the set, including building and lining the pool, covering the seams with muslin and paint, painting the set, and using papier m&acirc; ch&eacute; to create the stone on the archways. During performances, I facilitated transitions and acted as a point of contact between the cast and the stage manager for cues, as well as making a brief cameo appearance in the show. 
-               </p> </div>
+                  <div class="mdl-card modal-card light-primary-color">
+                    
+                    <div class="mdl-card__media">
+                      <img src="img/portfolio/MetaCandle.jpg" style="width:100%"/>
+                    </div>
+                    <div class="mdl-card__supporting-text primary-text-color">
+                      As an Assistant Stage Manager...
+                      </div>
+                  </div>
                 </div>
               </div>
         </div>
@@ -103,55 +217,38 @@
         <div id="vibemodal" class="modal mdl-shadow--4dp light-primary-color">
             
           <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect primary-text-color">
+            
             <div class="mdl-tabs__tab-bar">
-                    <a href="#vibe1" class="mdl-tabs__tab is-active">Image 1</a>
-                    <a href="#vibe2" class="mdl-tabs__tab">Image 2</a>
-                    <a href="#vibe3" class="mdl-tabs__tab">Image3</a>
-                    <a href="#vibeabout" class="mdl-tabs__tab">About</a>
+                    <a href="#vibe1" class="mdl-tabs__tab is-active">Responsiveness</a>
+                    <a href="#vibe2" class="mdl-tabs__tab">Research</a>
+                    <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
+                      <i class="material-icons">highlight_off</i>
+                    </button>
                 </div>
               
                 <div class="mdl-tabs__panel is-active" id="vibe1">
-                  <img src="img/portfolio/Vibrator3.jpg" style="width:100%"/>
-                </div>
+                  <div class="mdl-card modal-card light-primary-color">
+                    
+                    <div class="mdl-card__media">
+                      <img src="img/portfolio/VibeHands.jpg" style="width:100%"/>
+                    </div>
+                    <div class="mdl-card__supporting-text primary-text-color">
+                      As an actor...
+                      </div>
+                  </div>
+                  
+                </div>                
                 <div class="mdl-tabs__panel" id="vibe2">
-                  <img src="img/portfolio/Vibrator1LG.jpg" width="100%"/>
-                </div>
-                <div class="mdl-tabs__panel" id="vibe3">
-                  <img src="img/portfolio/VibratorLG.jpg" width="100%"/>
-                </div>
-                <div class="mdl-tabs__panel" id="vibeabout">
-                  <h3 class="showTitle">In the Next Room</h3>
-                  <h6 class="showInfo">Fall 2014<hr class="dark-primary-color"/></h6>
-                  <div class="showInfo">
-                  <h5>Actor</h5>
-                  <h6>Luther College Visual & Performing Arts</h6>
+                  <div class="mdl-card modal-card light-primary-color">
+                    
+                    <div class="mdl-card__media">
+                      <img src="img/portfolio/VibeClass.jpg" width="100%"/>
+                    </div>
+                    <div class="mdl-card__supporting-text primary-text-color">
+                      As an actor...
+                      </div>
                   </div>
-                </div>
-              </div>
-        </div>
-        
-        <div id="dispmodal" class="modal mdl-shadow--4dp light-primary-color">
-            
-          <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect primary-text-color">
-            <div class="mdl-tabs__tab-bar">
-                    <a href="#dispute1" class="mdl-tabs__tab is-active">Image 1</a>
-                    <a href="#dispute2" class="mdl-tabs__tab">Image 2</a>
-                    <a href="#disputeabout" class="mdl-tabs__tab">About</a>
-                </div>
-              
-                <div class="mdl-tabs__panel is-active" id="dispute1">
-                  <img src="img/portfolio/LaDispute1.jpg" style="width:100%"/>
-                </div>
-                <div class="mdl-tabs__panel" id="dispute2">
-                  <img src="img/portfolio/LaDisputeRiver.jpg" width="100%"/>
-                </div>
-                <div class="mdl-tabs__panel" id="disputeabout">
-                  <h3 class="showTitle">La Dispute</h3>
-                  <h6 class="showInfo">Spring 2014<hr class="dark-primary-color"/></h6>
-                  <div class="showInfo">
-                  <h5>Scenic Construction</h5>
-                  <h6>Luther College Visual & Performing Arts</h6>
-                  </div>
+                  
                 </div>
               </div>
         </div>
@@ -159,29 +256,38 @@
         <div id="proofmodal" class="modal mdl-shadow--4dp light-primary-color">
             
           <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect primary-text-color">
+            
             <div class="mdl-tabs__tab-bar">
-                    <a href="#proof1" class="mdl-tabs__tab is-active">Image 1</a>
-                    <a href="#proof2" class="mdl-tabs__tab">Image 2</a>
-                    <a href="#proof3" class="mdl-tabs__tab">Image3</a>
-                    <a href="#proofabout" class="mdl-tabs__tab">About</a>
+                    <a href="#proof1" class="mdl-tabs__tab is-active">Interdiscipline</a>
+                    <a href="#proof2" class="mdl-tabs__tab">Listening</a>
+                    <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
+                      <i class="material-icons">highlight_off</i>
+                    </button>
                 </div>
               
                 <div class="mdl-tabs__panel is-active" id="proof1">
-                  <img src="img/portfolio/Proof2.jpg" style="width:100%"/>
+                  <div class="mdl-card modal-card light-primary-color">
+                    
+                    <div class="mdl-card__media">
+                      <img src="img/portfolio/ProofDiscuss.jpg" style="width:100%"/>
+                    </div>
+                    <div class="mdl-card__supporting-text primary-text-color">
+                      As an actor...
+                      </div>
+                  </div>
+                  
                 </div>
                 <div class="mdl-tabs__panel" id="proof2">
-                  <img src="img/portfolio/Proof1.jpg" width="100%"/>
-                </div>
-                <div class="mdl-tabs__panel" id="proof3">
-                  <img src="img/portfolio/Proof3.jpg" width="47%" style="position:relative; left:26%"/>
-                </div>
-                <div class="mdl-tabs__panel" id="proofabout">
-                  <h3 class="showTitle">Proof</h3>
-                  <h6 class="showInfo">Fall 2013<hr class="dark-primary-color"/></h6>
-                  <div class="showInfo">
-                  <h5>Actor</h5>
-                  <h6>Luther College Visual & Performing Arts</h6>
+                  <div class="mdl-card modal-card light-primary-color">
+                    
+                    <div class="mdl-card__media">
+                      <img src="img/portfolio/ProofPoint.jpg" width="100%"/>
+                    </div>
+                    <div class="mdl-card__supporting-text primary-text-color">
+                      As an actor...
+                      </div>
                   </div>
+                  
                 </div>
               </div>
         </div>
@@ -189,26 +295,25 @@
         <div id="arcmodal" class="modal mdl-shadow--4dp light-primary-color">
             
           <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect primary-text-color">
-            <div class="mdl-tabs__tab-bar">
-                    <a href="#arcadia1" class="mdl-tabs__tab is-active">Image 1</a>
-                    <a href="#arcadia2" class="mdl-tabs__tab">Image 2</a>
-                    <a href="#arcabout" class="mdl-tabs__tab">About</a>
+           
+            <div class="mdl-tabs__tab-bar no-tabs">
+                    <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
+                      <i class="material-icons">highlight_off</i>
+                    </button>
                 </div>
               
                 <div class="mdl-tabs__panel is-active" id="arcadia1">
-                  <img src="img/portfolio/Arcadia1.jpg" style="width:100%"/>
-                </div>
-                <div class="mdl-tabs__panel" id="arcadia2">
-                  <img src="img/portfolio/Arcadia2.jpg" width="100%"/>
-                </div>
-                <div class="mdl-tabs__panel" id="arcabout">
-                  <h3 class="showTitle">Arcadia</h3>
-                  <h6 class="showInfo">Spring 2012<hr class="dark-primary-color"/></h6>
-                  <div class="showInfo">
-                  <h5>Prop Master</h5>
-                  <h6>Luther College Visual & Performing Arts</h6>
+                  <div class="mdl-card modal-card light-primary-color">
+                    
+                    <div class="mdl-card__media">
+                      <img src="img/portfolio/ArcadiaProps.jpg" style="width:100%"/>
+                    </div>
+                    <div class="mdl-card__supporting-text primary-text-color">
+                      As the props master...
+                      </div>
                   </div>
-                </div>
+                  
+                </div>               
               </div>
         </div>
         
@@ -219,57 +324,76 @@
      <div class="mdl-card mdl-shadow--2dp image-card" id="loveinfo" style="background: url('img/portfolio/LoveAndInformation.jpg') center / cover">
       <div class="mdl-card__title mdl-card--expand"></div>
       <div class="mdl-card__actions">
-        <span class="text-primary-color showTitle">Love and Information</span>
+        <span class="text-primary-color showTitle">Love and Information ~ Fall 2015</span>
       </div>
     </div>
         </div>
-          
-        <div id="metadiv" class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet mdl-cell--4-col-phone light-primary-color text-primary-color">
-    <div class="mdl-card mdl-shadow--2dp image-card" id="meta" style="background: url('img/portfolio/Meta2.jpg') center / cover">
+        
+        <div id="spindiv" class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet mdl-cell--4-col-phone light-primary-color text-primary-color">
+     <div class="mdl-card mdl-shadow--2dp image-card" id="spin" style="background: url('img/portfolio/SPINboard (2).jpg') center / cover">
       <div class="mdl-card__title mdl-card--expand"></div>
       <div class="mdl-card__actions">
-        <span class="text-primary-color showTitle">Metamorphoses</span>
+        <span class="text-primary-color showTitle">SPIN Theater ~ Ongoing</span>
       </div>
     </div>
         </div>
+            </div>
+
+        <div class="mdl-grid">
+        <div id="spdiv" class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet mdl-cell--4-col-phone light-primary-color text-primary-color">
+    <div class="mdl-card mdl-shadow--2dp image-card" id="senior" style="background: url('img/portfolio/SeniorProject.jpg') center / cover">
+      <div class="mdl-card__title mdl-card--expand"></div>
+      <div class="mdl-card__actions">
+        <span class="text-primary-color showTitle">Lost and Found App ~ Ongoing</span>
       </div>
-      
-      <div class="mdl-grid">
+    </div>
+        </div>
+
+        <div id="ibmdiv" class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet mdl-cell--4-col-phone light-primary-color text-primary-color">
+    <div class="mdl-card mdl-shadow--2dp image-card" id="ibm" style="background: url('img/portfolio/cloud (2).jpg') center / cover">
+      <div class="mdl-card__title mdl-card--expand"></div>
+      <div class="mdl-card__actions">
+        <span class="text-primary-color showTitle">IBM Cloud ~ Summer 2015</span>
+      </div>
+    </div>
+        </div>
+    </div>
+            <div class="mdl-grid">
+             <div id="metadiv" class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet mdl-cell--4-col-phone light-primary-color text-primary-color">
+    <div class="mdl-card mdl-shadow--2dp image-card" id="meta" style="background: url('img/portfolio/MetaCandles.jpg') center / cover">
+      <div class="mdl-card__title mdl-card--expand"></div>
+      <div class="mdl-card__actions">
+        <span class="text-primary-color showTitle">Metamorphoses ~ Spring 2015</span>
+      </div>
+    </div>
+        </div> 
+
         <div id="vibediv" class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet mdl-cell--4-col-phone light-primary-color text-primary-color">
-    <div class="mdl-card mdl-shadow--2dp image-card" id="vibrator" style="background: url('img/portfolio/Vibrator3.jpg') center / cover">
+    <div class="mdl-card mdl-shadow--2dp image-card" id="vibrator" style="background: url('img/portfolio/VibeHands.jpg') center / cover">
       <div class="mdl-card__title mdl-card--expand"></div>
       <div class="mdl-card__actions">
-        <span class="text-primary-color showTitle">In the Next Room</span>
+        <span class="text-primary-color showTitle">In the Next Room ~ Fall 2014</span>
       </div>
     </div>
+        </div> 
         </div>
-    
-    
-      <div id="dispdiv" class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet mdl-cell--4-col-phone light-primary-color text-primary-color">
-    <div class="mdl-card mdl-shadow--2dp image-card" id="dispute" style="background: url('img/portfolio/LaDispute1.jpg') center / cover">
-      <div class="mdl-card__title mdl-card--expand"></div>
-      <div class="mdl-card__actions">
-        <span class="text-primary-color showTitle">La Dispute</span>
-      </div>
-    </div>
-      </div>  
-      </div>
+
            
        <div class="mdl-grid"> 
         <div id = "proofdiv" class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet mdl-cell--4-col-phone light-primary-color text-primary-color">
-    <div class="mdl-card mdl-shadow--2dp image-card" id="proof" style="background: url('img/portfolio/Proof2.jpg') center / cover">
+    <div class="mdl-card mdl-shadow--2dp image-card" id="proof" style="background: url('img/portfolio/ProofDiscuss.jpg') center / cover">
       <div class="mdl-card__title mdl-card--expand"></div>
       <div class="mdl-card__actions">
-        <span class="text-primary-color showTitle">Proof</span>
+        <span class="text-primary-color showTitle">Proof ~ Fall 2013</span>
       </div>
     </div>
       </div>
 
       <div id="arcdiv" class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet mdl-cell--4-col-phone light-primary-color text-primary-color">
-    <div class="mdl-card mdl-shadow--2dp image-card" id="arcadia" style="background: url('img/portfolio/Arcadia1.jpg') center / cover">
+    <div class="mdl-card mdl-shadow--2dp image-card" id="arcadia" style="background: url('img/portfolio/ArcadiaProps.jpg') center / cover">
       <div class="mdl-card__title mdl-card--expand"></div>
       <div class="mdl-card__actions">
-        <span class="text-primary-color showTitle">Arcadia</span>
+        <span class="text-primary-color showTitle">Arcadia ~ Spring 2013</span>
       </div>
     </div>
     </div>
@@ -280,10 +404,12 @@
   <footer class="mdl-mini-footer">
   <div class="mdl-mini-footer__left-section">
     <ul class="mdl-mini-footer__link-list">
-      <li><a href="#">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="https://github.com/harrmi02">GitHub</a></li>
-      <li><a href="">Contact</a></li>
+      <li>I designed and implemented this site myself using Material Design Lite.</li>
+    </ul>
+  </div>
+  <div class="mld-mini-footer__right-section">
+    <ul class="mdl-mini-footer__link-list" >
+        <li style="float:right">You can view more of my programming projects on <a href="https://github.com/harrmi02" style="color:#FFFFFF">GitHub</a></li>
     </ul>
   </div>
 </footer>

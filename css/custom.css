@@ -39,6 +39,10 @@
 
 }
 
+.no-tabs{
+  height: 32px;
+}
+
 .mdl-tabs__panel{
   -webkit-transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1), 0.3s ease-in-out;
   transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1), 0.3s ease-in-out;
@@ -72,7 +76,7 @@
 #content{
   will-change: display;
   min-width: 100%;
-  min-height: 1815px;
+  min-height: 2355px;;
   display: none;
   opacity: .95;
   position: absolute;
@@ -82,12 +86,12 @@
   padding: 1%;
 }
 
-#lidiv, #vibediv, #proofdiv{
+#lidiv, #vibediv, #spdiv, #proofdiv{
   padding-left: 0.8%;
   padding-right: 0.5%;
 }
 
-#metadiv, #dispdiv, #arcdiv{
+#metadiv, #spindiv, #ibmdiv, #arcdiv{
   padding-right: 0.8%;
   padding-left: 0.5%;
 }
@@ -106,10 +110,11 @@
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  min-width: 60%;
+  min-width: 55%;
   
   position: fixed;
-  top: 50px;
+  top: 52px;
+  max-height: 94%;
   left: 50%;
   -webkit-transform: translate(-50%, 0%);
       -ms-transform: translate(-50%, 0%);
@@ -124,18 +129,21 @@
 	-o-transition: all 0.4s ease-in-out, height 2s, width 2s;
 }
 
-#limodal, #metamodal{
-  top: 60px;
-  -webkit-transform: translate(-50%, 0%);
-      -ms-transform: translate(-50%, 0%);
-          transform: translate(-50%, 0%);
-}
-
-#limodal{
-  min-width: 50%;
-}
-
 .modal--active {
   visibility: visible;
   opacity: 1;
+}
+
+.modal-card{
+  width: 100%;
+  position: relative;
+}
+
+.mdl-tabs__tab-bar{
+  position: relative;
+}
+
+.mdl-button--icon{
+  position: absolute;
+  right: 2px;
 }
