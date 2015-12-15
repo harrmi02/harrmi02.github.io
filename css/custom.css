@@ -39,6 +39,11 @@
 
 }
 
+.mdl-card__media{
+  height: 100%;
+  position: relative;
+}
+
 .no-tabs{
   height: 32px;
 }
@@ -146,4 +151,11 @@
 .mdl-button--icon{
   position: absolute;
   right: 2px;
+}
+
+.mdl-button{
+  position: absolute;
+  bottom: 0;
+  right:0;
+  color: #B6B6B6;
 }
