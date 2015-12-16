@@ -155,19 +155,19 @@
 	-o-transition: all 0.4s ease-in-out, height 2s, width 2s;
 }
 
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 1025px){
   #content{
     min-height: 1000px;
   }
   
   #lidiv, #vibediv, #spdiv, #proofdiv{
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 0.1;
+    padding-right: 0.05;
   }
   
   #metadiv, #spindiv, #ibmdiv, #arcdiv{
-    padding-right: 0;
-    padding-left: 0;
+    padding-right: 0.05;
+    padding-left: 0.1;
   }
   
   .modal{
