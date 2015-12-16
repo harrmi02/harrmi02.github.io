@@ -89,6 +89,7 @@
   transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1), 0.4s ease-in-out;
 	-o-transition: all 0.4s ease-in-out;
   padding: 1%;
+  overflow: hidden;
 }
 
 #lidiv, #vibediv, #spdiv, #proofdiv{
@@ -99,6 +100,26 @@
 #metadiv, #spindiv, #ibmdiv, #arcdiv{
   padding-right: 0.8%;
   padding-left: 0.5%;
+}
+
+#spinmodal{
+  min-width:800px;
+}
+
+#seniormodal{
+  min-width: 940px;
+}
+
+#ibmmodal, #vibemodal, #proofmodal{
+  min-width: 840px;
+}
+
+#metamodal, #arcmodal{
+  min-width: 860px;
+}
+
+#limodal{
+  min-width: 40%;
 }
 
 .modal {
@@ -132,6 +153,31 @@
   -webkit-transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1), 0.4s ease-in-out, max-height 2s;
           transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1), 0.4s ease-in-out, max-height 2s;
 	-o-transition: all 0.4s ease-in-out, height 2s, width 2s;
+}
+
+@media only screen and (max-width: 768px){
+  #content{
+    min-height: 1000px;
+  }
+  
+  #lidiv, #vibediv, #spdiv, #proofdiv{
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  #metadiv, #spindiv, #ibmdiv, #arcdiv{
+    padding-right: 0;
+    padding-left: 0;
+  }
+  
+  .modal{
+    top: 5px;
+    min-width: 70%;
+  }
+  
+  #spinmodal, #seniormodal, #vibemodal, #proofmodal, #metamodal, #arcmodal, #ibmmodal{
+    min-width: 70%;
+  }
 }
 
 .modal--active {
