@@ -1,3 +1,7 @@
+@-ms-viewport {
+    width: device-width;
+}
+
 .image-card.mdl-card {
 	width:100%;
 	height: 540px;
@@ -34,13 +38,11 @@
    	-webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.72), 0 3px 6px rgba(0, 0, 0, 0.72);
 	-moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.72), 0 3px 6px rgba(0, 0, 0, 0.72);
 	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.72), 0 3px 6px rgba(0, 0, 0, 0.72);
-  
-
 
 }
 
 .mdl-card__media{
-  height: 100%;
+  height: auto;
   position: relative;
 }
 
@@ -81,15 +83,16 @@
 #content{
   will-change: display;
   min-width: 100%;
-  min-height: 2355px;;
+  min-height: 100%;
   display: none;
   opacity: .95;
-  position: absolute;
+  position: fixed;
+  top:0px;
+  left: 0px;
   -webkit-transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1), 0.4s ease-in-out;
   transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1), 0.4s ease-in-out;
 	-o-transition: all 0.4s ease-in-out;
-  padding: 1%;
-  overflow: hidden;
+  overflow: visible;
 }
 
 #lidiv, #vibediv, #spdiv, #proofdiv{
@@ -155,10 +158,7 @@
 	-o-transition: all 0.4s ease-in-out, height 2s, width 2s;
 }
 
-@media only screen and (max-width: 1025px){
-  #content{
-    min-height: 1000px;
-  }
+@media screen and (max-width: 961px){
   
   #lidiv, #vibediv, #spdiv, #proofdiv{
     padding-left: 0.1;
@@ -171,13 +171,18 @@
   }
   
   .modal{
-    top: 5px;
-    min-width: 70%;
+    top: 12px;
+    max-width: 95%;
+    max-height: 100%;
+    width: 100%;
+    height: auto;
   }
   
-  #spinmodal, #seniormodal, #vibemodal, #proofmodal, #metamodal, #arcmodal, #ibmmodal{
-    min-width: 70%;
+  #spinmodal, #seniormodal, #ibmmodal, #vibemodal, #proofmodal, #metamodal, #arcmodal{
+    min-width: 0px;  
   }
+  
+  
 }
 
 .modal--active {
